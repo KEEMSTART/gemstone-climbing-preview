@@ -1,0 +1,35 @@
+:root {
+  --amethyst: #7b2ff7;
+  --sapphire: #2563eb;
+  --emerald:  #10b981;
+  --magenta:  #ff2d9b;
+  --citrine:  #ffcb05;
+  --rock:     #0e0b1a;
+  --rock-2:   #1a1430;
+  --ink:      #14111f;
+  --paper:    #faf7ff;
+  --muted:    #6b6480;
+  --grad-gem: linear-gradient(120deg, var(--amethyst), var(--sapphire) 55%, var(--emerald));
+  --grad-cta: linear-gradient(120deg, var(--magenta), var(--amethyst));
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(20,10,40,.18);
+  --container: 1120px;
+}
+
+*{box-sizing:border-box;margin:0}
+
+body{font-family:var(--font-body); color:var(--ink); background:var(--paper); line-height:1.55;}
+
+.container{max-width:var(--container);margin-inline:auto;padding-inline:20px}
+
+h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  .reveal { opacity:1; transform:none; }
+}
