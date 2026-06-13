@@ -69,7 +69,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 @media (max-width:760px){.footer__grid{grid-template-columns:1fr;gap:24px}}
 
 /* ── Hero ── */
-.hero{background:var(--grad-gem);color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
+.hero{
+  background:
+    linear-gradient(120deg, rgba(123,47,247,.85), rgba(37,99,235,.62) 55%, rgba(16,185,129,.7)),
+    linear-gradient(rgba(14,11,26,.28), rgba(14,11,26,.5)),
+    url('assets/photos/home-hero.jpg') center 38%/cover no-repeat;
+  color:#fff;padding:120px 0;text-align:center;position:relative;overflow:hidden;
+}
 .hero__inner{position:relative;z-index:1}
 .hero__title{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:6px 0}
 .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;opacity:.9;font-weight:600}
@@ -133,6 +139,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .why__icon{display:block;font-size:2rem;margin-bottom:10px}
 .why__item strong{font-size:1rem;font-weight:700;font-family:var(--font-display)}
 
+/* ── Photo gallery ── */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.gallery{grid-template-columns:1fr}}
+.gallery img{width:100%;height:260px;object-fit:cover;object-position:center 45%;border-radius:var(--radius);box-shadow:var(--shadow);display:block}
+.gallery__note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:18px}
+
 /* ── Testimonial quotes ── */
 .quote{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
 .quote p{color:var(--ink);font-style:italic}
@@ -143,7 +156,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
    ════════════════════════════════════════════════════ */
 
 /* ── Party hero ── */
-.hero--party{background:var(--grad-cta)}
+.hero--party{
+  background:
+    linear-gradient(120deg, rgba(255,45,155,.78), rgba(123,47,247,.8)),
+    linear-gradient(rgba(14,11,26,.18), rgba(14,11,26,.42)),
+    url('assets/photos/party-hero.jpg') center 55%/cover no-repeat;
+}
 
 /* ── Package cards ── */
 .cards--pkg{grid-template-columns:repeat(3,1fr)}

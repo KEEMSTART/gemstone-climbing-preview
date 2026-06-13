@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
 
-    // Spawn ~120 pieces
-    const pieces = Array.from({ length: 120 }, () => ({
+    // Spawn a modest burst of pieces
+    const pieces = Array.from({ length: 50 }, () => ({
       x: Math.random() * W,
       y: Math.random() * -H * 0.3,         // start above viewport
       w: 6 + Math.random() * 6,             // 6–12 px wide
@@ -110,14 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── 4. Wire triggers ─────────────────────────────────────────────────────
 
-  // Party page: fire confetti on load
+  // Party page only: one gentle confetti burst on load.
   if (document.getElementById('party-hero')) {
-    burstConfetti(1500);
+    burstConfetti(1200);
   }
-
-  // Every CTA button: confetti on hover
-  document.querySelectorAll('.btn--cta').forEach(btn => {
-    btn.addEventListener('mouseenter', () => burstConfetti(900));
-  });
 
 });
