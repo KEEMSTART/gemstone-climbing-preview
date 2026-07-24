@@ -209,3 +209,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .request-form input{padding:10px 12px;border:1px solid #ddd;border-radius:10px;font:inherit}
 .request-form .btn{justify-self:start}
 .request-form .note{margin:0}
+
+/* Contact links keep the footer's citrine treatment but stay tappable */
+.footer a.contact-link{color:var(--citrine);text-decoration:none}
+.footer a.contact-link:hover{text-decoration:underline}
+.cta-band__phone a{color:#fff;text-decoration:none}
+.cta-band__phone a:hover{text-decoration:underline}
