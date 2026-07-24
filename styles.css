@@ -73,7 +73,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   background:
     linear-gradient(120deg, rgba(123,47,247,.85), rgba(37,99,235,.62) 55%, rgba(16,185,129,.7)),
     linear-gradient(rgba(14,11,26,.28), rgba(14,11,26,.5)),
-    url('assets/photos/home-hero.jpg') center 38%/cover no-repeat;
+    url('assets/photos/home-hero.jpg') center 55%/cover no-repeat;
   color:#fff;padding:120px 0;text-align:center;position:relative;overflow:hidden;
 }
 .hero__inner{position:relative;z-index:1}
