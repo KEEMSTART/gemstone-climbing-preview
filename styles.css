@@ -215,3 +215,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .footer a.contact-link:hover{text-decoration:underline}
 .cta-band__phone a{color:#fff;text-decoration:none}
 .cta-band__phone a:hover{text-decoration:underline}
+
+/* ── Visit us (address + map + directions) ── */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center;
+  background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px;
+  box-shadow:var(--shadow);max-width:900px;margin:0 auto;text-align:left}
+@media (max-width:720px){.visit{grid-template-columns:1fr}}
+.visit h3{font-size:1.3rem;margin-bottom:6px}
+.visit address{font-style:normal;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.visit__map{width:100%;height:220px;border:0;border-radius:12px;display:block;background:#eee}
+.visit__note{color:var(--muted);font-size:.85rem;margin-top:10px}
