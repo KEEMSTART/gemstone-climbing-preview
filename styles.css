@@ -334,6 +334,33 @@ a.deal{display:block;text-decoration:none;cursor:pointer;transition:transform .1
 a.deal:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(20,10,40,.3)}
 .deal__buy{display:inline-block;margin-top:10px;color:var(--citrine);font-weight:700;font-size:.9rem}
 
+/* ── Benefits cards (adaptive page) ── */
+.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto}
+@media (max-width:800px){.benefits{grid-template-columns:1fr}}
+.benefit{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden}
+.benefit::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--grad-gem)}
+.benefit h3{font-size:1.2rem;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.benefit__lead{color:var(--ink);margin-bottom:12px;font-size:.95rem}
+.benefit ul{list-style:none;display:grid;gap:8px}
+.benefit li{color:var(--muted);font-size:.9rem;padding-left:20px;position:relative;line-height:1.5}
+.benefit li::before{content:'▸';position:absolute;left:0;color:var(--amethyst);font-weight:700}
+
+/* ── Condition tags ── */
+.tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+.tag{background:#fff;border:1px solid #e8e0f5;border-left:4px solid var(--amethyst);
+  border-radius:10px;padding:10px 16px;font-size:.92rem;font-weight:600;box-shadow:var(--shadow)}
+
+/* ── Feature/press band ── */
+.press{background:var(--rock-2);color:#fff;border-radius:var(--radius);max-width:900px;margin:0 auto;
+  padding:28px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:var(--shadow)}
+.press h3{font-size:1.25rem;margin-bottom:4px}
+.press p{color:#d9d2ee;font-size:.95rem;max-width:480px}
+
+/* ── Pull quote ── */
+.pullquote{max-width:780px;margin:0 auto;text-align:center;font-family:var(--font-display);
+  font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;color:var(--ink)}
+.pullquote span{background:linear-gradient(180deg,transparent 62%,rgba(255,203,5,.55) 62%)}
+
 /* ── Layout helpers: tighter pages, side-by-side tables, 3-step grid ── */
 .section--tight{padding:44px 0}
 .steps--3{grid-template-columns:repeat(3,1fr);max-width:860px;margin-inline:auto}
