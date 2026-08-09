@@ -9,18 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__logo" href="index.html">💎 Gemstone</a>
       <nav class="nav__links">
-        <a href="index.html#offer">Climbing</a>
-        <a href="index.html#offer">Classes</a>
-        <a href="parties.html">Parties</a>
-        <a href="index.html#why">Rates</a>
-        <a href="index.html#footer">Hours &amp; Contact</a>
+        <a href="rates.html">Rates</a>
+        <a href="classes.html">Classes</a>
+        <a href="yoga-fitness.html">Yoga &amp; Fitness</a>
+        <a href="parties.html" aria-current="page">Parties</a>
+        <a href="visit.html">Hours &amp; Contact</a>
       </nav>
       <a class="btn btn--cta nav__book" href="parties.html">Book a Party</a>
     </div>
@@ -33,7 +33,7 @@
       <div class="container hero__inner">
         <p class="eyebrow">Birthday parties &amp; group events</p>
         <h1 class="hero__title">Birthdays that rock. 🎉</h1>
-        <p class="hero__sub">You bring the cake — we bring the staff host, the party room, and a wall full of fun. Parents relax, kids climb.</p>
+        <p class="hero__sub">You bring the cake — we bring the gear, the party room, and a private belayer. Parents relax, kids climb.</p>
         <a class="btn btn--cta" href="#request">Request Your Party Date</a>
       </div>
     </section>
@@ -41,59 +41,51 @@
     <!-- ── Section 2: Package Cards ── -->
     <section class="section">
       <div class="container">
-        <h2>Pick your adventure</h2>
-        <p class="section__sub">Three packages sized for any crew — from a small gathering to a full-on birthday bash.</p>
-        <div class="cards cards--pkg">
+        <h2>Party packages</h2>
+        <p class="section__sub">Every party includes rental gear for all climbers, the private party room for 2 hours, a private belayer — and a free Gemstone t-shirt for the birthday kid.</p>
+        <div class="cards cards--pkg cards--pkg2">
 
-          <!-- Card A: Base Camp -->
-          <div class="pkg">
-            <h3 class="pkg__name">Base Camp</h3>
-            <p class="pkg__price">$199</p>
-            <ul class="pkg__list">
-              <li>✓ 1.5 hours of party time</li>
-              <li>✓ Up to 10 climbers</li>
-              <li>✓ Private party room</li>
-              <li>✓ Dedicated staff host</li>
-              <li>✓ Climbing shoes included</li>
-            </ul>
-            <a class="btn btn--cta" href="#request">Choose Base Camp</a>
-          </div>
-
-          <!-- Card B: Summit (popular) -->
+          <!-- School-year package -->
           <div class="pkg pkg--popular">
-            <span class="pkg__ribbon">Most popular</span>
-            <h3 class="pkg__name">Summit</h3>
-            <p class="pkg__price">$299</p>
+            <span class="pkg__ribbon">Sept – May</span>
+            <h3 class="pkg__name">School-Year Party</h3>
+            <p class="pkg__price">$138<span style="font-size:.95rem;color:var(--muted)"> +tax</span></p>
             <ul class="pkg__list">
-              <li>✓ 2 hours of party time</li>
-              <li>✓ Up to 20 climbers</li>
-              <li>✓ Private party room</li>
-              <li>✓ Dedicated staff host</li>
-              <li>✓ Climbing shoes included</li>
-              <li>✓ Printable invitations</li>
-              <li>✓ Free return pass for the birthday kid</li>
+              <li>✓ Covers your first 6 climbers</li>
+              <li>✓ 2 hours of climbing + party room</li>
+              <li>✓ Rental gear for every climber</li>
+              <li>✓ Private belayer / party helper</li>
+              <li>✓ Free Gemstone tee for the birthday kid</li>
+              <li>✓ Extra climbers just $18 each</li>
             </ul>
-            <a class="btn btn--cta" href="#request">Choose Summit</a>
+            <a class="btn btn--cta" href="#request">Request a Date</a>
           </div>
 
-          <!-- Card C: Adventure -->
+          <!-- Summer package -->
           <div class="pkg">
-            <h3 class="pkg__name">Adventure</h3>
-            <p class="pkg__price">$399</p>
+            <span class="pkg__ribbon" style="background:linear-gradient(120deg,var(--sapphire),var(--emerald))">June – Aug</span>
+            <h3 class="pkg__name">Summer Party</h3>
+            <p class="pkg__price">$100</p>
             <ul class="pkg__list">
-              <li>✓ 2.5 hours of party time</li>
-              <li>✓ Up to 30 climbers</li>
-              <li>✓ Extended party room time</li>
-              <li>✓ Dedicated staff host</li>
-              <li>✓ Climbing shoes included</li>
-              <li>✓ Printable invitations</li>
-              <li>✓ Dedicated photo spot</li>
+              <li>✓ Covers your first 6 kids</li>
+              <li>✓ 2 hours of climbing + party room</li>
+              <li>✓ Rental gear for every climber</li>
+              <li>✓ Private belayer included</li>
+              <li>✓ Free Gemstone tee for the birthday kid</li>
+              <li>✓ Extra kids $15 each — up to 10 total</li>
             </ul>
-            <a class="btn btn--cta" href="#request">Choose Adventure</a>
+            <a class="btn btn--cta" href="#request">Request a Date</a>
           </div>
 
         </div>
-        <p class="note">Placeholder pricing — final packages set by Gemstone.</p>
+
+        <div class="facts">
+          <span class="fact">💵 $100 deposit locks your date</span>
+          <span class="fact">📅 Book at least 5 days ahead</span>
+          <span class="fact">🍕 Arrive 10 min early to set up food</span>
+          <span class="fact">✍ Every guest needs a <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">waiver</a></span>
+        </div>
+        <p class="note">Party room comes stocked with plates, napkins, utensils and cups. Prices from gemstoneclimbing.rocks — confirm when booking.</p>
       </div>
     </section>
 
@@ -110,17 +102,17 @@
           <div class="step">
             <div class="step__num">2</div>
             <h3>Request a date</h3>
-            <p>Send us your preferred date and we'll check the calendar.</p>
+            <p>At least 5 days ahead — we'll check the calendar.</p>
           </div>
           <div class="step">
             <div class="step__num">3</div>
-            <h3>We confirm + deposit</h3>
-            <p>We lock it in with a small deposit. Done.</p>
+            <h3>$100 deposit locks it in</h3>
+            <p>Then send the waiver link to your guest list.</p>
           </div>
           <div class="step">
             <div class="step__num">4</div>
             <h3>Show up &amp; climb!</h3>
-            <p>Arrive, meet your host, and let the kids loose.</p>
+            <p>Come 10 minutes early with the cake — we handle the rest.</p>
           </div>
         </div>
       </div>
@@ -137,6 +129,28 @@
           <img src="assets/photos/g1.jpg" alt="A climber grinning mid-route on a colorful wall" loading="lazy">
         </div>
         <p class="gallery__note">Actual photos from Gemstone Climbing Center.</p>
+      </div>
+    </section>
+
+    <!-- ── Section 3b2: Group events ── -->
+    <section class="section reveal" style="padding-top:0">
+      <div class="container">
+        <h2>Bigger groups? We do those too.</h2>
+        <p class="section__sub">Scouts, teams, churches, work events — 10 climbers or more.</p>
+        <div class="table-wrap">
+          <table class="rate-table">
+            <caption>Group events (minimum 10 climbers)</caption>
+            <thead><tr><th>Item</th><th>Price</th></tr></thead>
+            <tbody>
+              <tr><td>Youth climber (up to 17)</td><td class="price">$14</td></tr>
+              <tr><td>Adult climber (18+)</td><td class="price">$16</td></tr>
+              <tr><td>Rental gear</td><td class="price">$7</td></tr>
+              <tr><td>Party room, 2 hours</td><td class="price">$30</td></tr>
+              <tr><td>Private belayer, 1–2 hours</td><td class="price">$30–$60</td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="2">🎁 Book 10+ climbers in advance and we waive the gear rental fee.</td></tr></tfoot>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -194,8 +208,13 @@
           </details>
 
           <details class="faq__item">
-            <summary>Do you provide climbing shoes?</summary>
-            <p>Yes — climbing shoes are included for every climber in every package. Just make sure everyone wears socks (or we have socks available to purchase).</p>
+            <summary>Is gear included?</summary>
+            <p>Yes — rental harness and rental shoes are included for every climber in the party. Just have everyone wear socks.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do guests need to sign anything?</summary>
+            <p>Yes — every guest who enters the climbing areas needs a free online waiver, and kids need a parent or guardian to sign it. Easiest move: <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">send the waiver link</a> along with your invitations so everyone arrives ready to climb.</p>
           </details>
 
           <details class="faq__item">
@@ -215,12 +234,12 @@
 
           <details class="faq__item">
             <summary>How do you keep kids safe?</summary>
-            <p>A trained Gemstone staff host supervises the entire party from start to finish. Our auto-belays are designed specifically to be simple and safe — no prior experience required.</p>
+            <p>Every party includes a Gemstone helper and a private belayer who runs the climbing side. Auto-belays keep things simple and safe — no prior experience required.</p>
           </details>
 
           <details class="faq__item">
-            <summary>What's the deposit &amp; cancellation policy?</summary>
-            <p>A small deposit reserves your date and locks in your package. You can reschedule with reasonable notice. (Placeholder — final policy set by Gemstone.)</p>
+            <summary>What's the deposit &amp; booking policy?</summary>
+            <p>A $100 deposit reserves your date, and parties need to be booked at least 5 days in advance. Hosts can arrive 10 minutes early to bring in food and decorations.</p>
           </details>
 
         </div>
@@ -259,23 +278,7 @@
           </form>
         </div>
 
-          <div style="margin-top:36px"></div>
-          <div class="visit">
-            <div>
-              <h3>Visit us</h3>
-              <address>
-                135 5th Avenue South<br>
-                Twin Falls, ID 83301
-              </address>
-              <a class="btn btn--cta" target="_blank" rel="noopener"
-                 href="https://www.google.com/maps/dir/?api=1&destination=135+5th+Avenue+South,+Twin+Falls,+ID+83301">
-                Get Directions
-              </a>
-              <p class="visit__note">Free parking on site. <em>(To confirm with Gemstone.)</em></p>
-            </div>
-            <iframe class="visit__map" loading="lazy" title="Map to Gemstone Climbing Center"
-              src="https://www.google.com/maps?q=135+5th+Avenue+South,+Twin+Falls,+ID+83301&output=embed"></iframe>
-          </div>
+        <p style="margin-top:24px;opacity:.95">Party questions? Email <a href="mailto:kim@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">kim@</a> or <a href="mailto:patty@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">patty@gemstoneclimbing.rocks</a> · <a href="visit.html" style="color:#fff;font-weight:700">Hours &amp; directions →</a></p>
       </div>
     </section>
 
@@ -285,26 +288,27 @@
     <div class="container footer__grid">
       <div>
         <h3>Gemstone Climbing Center</h3>
-        <p>Twin Falls, Idaho — Southern Idaho's only indoor climbing gym. Fully ADA accessible.</p>
+        <p>Climbing · Yoga · Fitness · Events — Southern Idaho's only indoor climbing gym. Fully ADA accessible.</p>
+        <p class="footer__social">Facebook · Instagram · YouTube · X</p>
       </div>
       <div>
-        <h4>Hours</h4>
-        <p>Mon–Fri 3pm–9pm<br>Sat–Sun 10am–8pm</p>
-        <span class="hours-tag">Hours to confirm</span>
-      </div>
-      <div>
-        <h4>Visit &amp; Contact</h4>
+        <h4>Find us</h4>
         <p>135 5th Avenue South<br>Twin Falls, ID 83301</p>
         <p>
-          <a class="contact-link" href="tel:+12083297257">(208) 329-7257</a><br>
-          <a class="contact-link" href="mailto:kim@gemstoneclimbing.rocks">kim@gemstoneclimbing.rocks</a><br>
-          <a class="contact-link" href="mailto:patty@gemstoneclimbing.rocks">patty@gemstoneclimbing.rocks</a>
+          <a class="contact-link" href="tel:+12083297257">(208) 329-7257 (RCKS)</a><br>
+          <a class="contact-link" href="mailto:info@gemstoneclimbing.rocks">info@gemstoneclimbing.rocks</a>
         </p>
-        <p class="footer__social">Facebook · Instagram · YouTube · X</p>
-        <p><a href="#">Sign the waiver →</a></p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <p>
+          <a class="contact-link" href="visit.html">Hours &amp; contact</a><br>
+          <a class="contact-link" href="rates.html">Rates &amp; memberships</a><br>
+          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">✍ Sign the waiver</a>
+        </p>
       </div>
     </div>
-    <p class="footer__note">Mockup for redesign pitch. Hours/placeholder details to be confirmed.</p>
+    <p class="footer__note">Redesign mockup. Prices &amp; hours pulled from gemstoneclimbing.rocks — confirm with Gemstone before launch.</p>
   </footer>
   <script src="main.js" defer></script>
 </body>

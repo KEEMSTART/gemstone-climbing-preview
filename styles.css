@@ -249,3 +249,79 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .rating__stars{font-size:1.5rem;letter-spacing:2px}
 .rating__text{color:var(--muted);font-size:.9rem;margin-top:4px}
 .rating__text a{color:var(--amethyst)}
+
+/* ════════════════════════════════════════════════════
+   SUBPAGES (rates / classes / yoga / visit)
+   ════════════════════════════════════════════════════ */
+
+/* Compact page hero for interior pages */
+.hero--page{padding:64px 0}
+.hero--page .hero__title{font-size:clamp(2rem,5vw,3.2rem)}
+.hero--yoga{background:linear-gradient(120deg, var(--sapphire), var(--emerald))}
+.hero--classes{background:linear-gradient(120deg, var(--amethyst), var(--sapphire))}
+.hero--visit{background:linear-gradient(120deg, var(--rock-2), var(--amethyst))}
+
+/* Active nav link */
+.nav__links a[aria-current="page"]{color:var(--citrine)}
+
+/* ── Pricing tables ── */
+.table-wrap{overflow-x:auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);max-width:760px;margin:0 auto;min-width:0;width:100%}
+.rate-stack>*{min-width:0}
+.rate-table{width:100%;border-collapse:collapse;font-size:.98rem}
+.rate-table caption{font-family:var(--font-display);font-weight:700;font-size:1.15rem;text-align:left;padding:18px 22px 6px;color:var(--ink)}
+.rate-table th{text-align:left;font-weight:600;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;padding:10px 22px;border-bottom:1px solid #eee}
+.rate-table td{padding:12px 22px;border-bottom:1px solid #f2eefa}
+.rate-table tr:last-child td{border-bottom:none}
+.rate-table td:last-child,.rate-table th:last-child{text-align:right;white-space:nowrap}
+.rate-table .price{font-family:var(--font-display);font-weight:700;color:var(--amethyst);font-size:1.05rem}
+.rate-table tfoot td{color:var(--muted);font-size:.85rem;border-top:1px solid #eee;background:#faf8ff}
+
+/* Stack multiple tables with air */
+.rate-stack{display:grid;gap:28px}
+
+/* Two-up package grid (real seasonal party pricing) */
+.cards--pkg2{grid-template-columns:repeat(2,1fr);max-width:820px;margin-inline:auto}
+@media (max-width:820px){.cards--pkg2{grid-template-columns:1fr;max-width:420px}}
+
+/* ── Waiver push band ── */
+.waiver-band{background:var(--citrine);color:#0e0b1a;border-radius:var(--radius);
+  max-width:760px;margin:0 auto;padding:28px;display:flex;gap:20px;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;box-shadow:var(--shadow)}
+.waiver-band h3{font-size:1.3rem;margin-bottom:4px}
+.waiver-band p{font-size:.95rem;max-width:420px}
+.btn--dark{background:var(--rock);color:#fff;transition:transform .15s ease}
+.btn--dark:hover{transform:scale(1.04)}
+
+/* ── Quick fact pills (deposit / booking rules) ── */
+.facts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:26px 0 0}
+.fact{background:#fff;border:1px solid #eee;border-radius:999px;padding:9px 18px;
+  font-size:.9rem;font-weight:600;box-shadow:var(--shadow)}
+
+/* ── Weekly schedule ── */
+.sched{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+@media (max-width:900px){.sched{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.sched{grid-template-columns:1fr}}
+.sched__day{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px}
+.sched__day h3{font-size:1rem;color:var(--amethyst);border-bottom:2px solid #f2eefa;padding-bottom:8px;margin-bottom:10px}
+.sched__day ul{list-style:none;display:grid;gap:8px}
+.sched__day li{font-size:.92rem;display:flex;gap:10px}
+.sched__time{font-family:var(--font-display);font-weight:700;white-space:nowrap;min-width:64px}
+
+/* ── Hours table (visit page) ── */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:0 auto}
+@media (max-width:760px){.hours-grid{grid-template-columns:1fr}}
+.hours-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+.hours-card h3{font-size:1.15rem;margin-bottom:12px}
+.hours-card table{width:100%;border-collapse:collapse}
+.hours-card td{padding:7px 0;border-bottom:1px solid #f2eefa;font-size:.95rem}
+.hours-card tr:last-child td{border-bottom:none}
+.hours-card td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+.hours-card .today td{color:var(--amethyst);font-weight:700}
+.hours-card__note{color:var(--muted);font-size:.85rem;margin-top:10px}
+
+/* ── Deals strip ── */
+.deals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+@media (max-width:860px){.deals{grid-template-columns:1fr}}
+.deal{background:var(--rock-2);color:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.deal h3{color:var(--citrine);font-size:1.05rem;margin-bottom:6px}
+.deal p{font-size:.92rem;color:#d9d2ee}
