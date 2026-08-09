@@ -115,4 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
     burstConfetti(1200);
   }
 
+  // Weekly schedule: mark today's row. Enhancement only — the schedule
+  // reads fine without it.
+  const week = document.querySelector('.week');
+  if (week) {
+    const row = week.querySelector('[data-day="' + new Date().getDay() + '"]');
+    if (row) row.classList.add('is-today');
+  }
+
 });

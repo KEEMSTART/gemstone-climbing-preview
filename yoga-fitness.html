@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <header class="nav">
@@ -60,59 +60,78 @@
       </div>
     </section>
 
-    <!-- ── Weekly schedule ── -->
-    <section class="section reveal" style="padding-top:0">
+    <!-- Weekly schedule -->
+    <section class="section section--tight reveal" id="schedule">
       <div class="container">
         <h2>Weekly schedule</h2>
-        <p class="section__sub">Just drop in — or sign up online through our booking system.</p>
-        <div class="sched">
-          <div class="sched__day">
-            <h3>Monday</h3>
-            <ul>
-              <li><span class="sched__time">6:00a</span> Body Rock Boot Camp · Theron</li>
-              <li><span class="sched__time">8:00a</span> MetCon Fitness · Henry</li>
-              <li><span class="sched__time">9:00a</span> Flow Yoga · Kim</li>
-              <li><span class="sched__time">6:00p</span> Hot Core Power Yoga</li>
-            </ul>
-          </div>
-          <div class="sched__day">
-            <h3>Tuesday</h3>
-            <ul>
-              <li><span class="sched__time">9:00a</span> Flow Yoga · Dre</li>
-              <li><span class="sched__time">6:00p</span> Vinyasa Flow · Jessica</li>
-            </ul>
-          </div>
-          <div class="sched__day">
-            <h3>Wednesday</h3>
-            <ul>
-              <li><span class="sched__time">6:00a</span> Hump Day Fitness · Chelsea</li>
-              <li><span class="sched__time">8:00a</span> MetCon Fitness · Henry</li>
-              <li><span class="sched__time">9:00a</span> Flow Yoga · Kim</li>
-              <li><span class="sched__time">6:00p</span> Hot Core Power Yoga · Kim</li>
-            </ul>
-          </div>
-          <div class="sched__day">
-            <h3>Thursday</h3>
-            <ul>
-              <li><span class="sched__time">5:30p</span> Restorative Yin · Andrea</li>
-            </ul>
-          </div>
-          <div class="sched__day">
-            <h3>Friday</h3>
-            <ul>
-              <li><span class="sched__time">6:00a</span> TGIF Fitness · Chelsea</li>
-              <li><span class="sched__time">8:00a</span> MetCon Fitness · Henry</li>
-              <li><span class="sched__time">9:00a</span> Flow Yoga · Kim</li>
-            </ul>
-          </div>
-          <div class="sched__day">
-            <h3>Saturday</h3>
-            <ul>
-              <li><span class="sched__time">10:00a</span> Flow Yoga · teacher rotation</li>
-            </ul>
-          </div>
+        <p class="section__sub">Just drop in &mdash; or sign up online through our booking system.</p>
+
+        <div class="legend">
+          <span><i style="background:var(--amethyst)"></i> Yoga</span>
+          <span><i style="background:var(--emerald)"></i> Fitness</span>
         </div>
-        <p class="note">Summer schedule — classes rotate seasonally. Questions? Email <a href="mailto:kim@gemstoneclimbing.rocks" style="color:var(--amethyst)">kim@gemstoneclimbing.rocks</a> or call (208) 329-7257 ext. 2.</p>
+
+        <div class="week">
+
+          <div class="week__row" data-day="1">
+            <div class="week__day">Mon <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls cls--fit"><span class="cls__time">6:00a</span><span class="cls__name">Body Rock Boot Camp</span><span class="cls__who">Theron</span></div>
+              <div class="cls cls--fit"><span class="cls__time">8:00a</span><span class="cls__name">MetCon Fitness</span><span class="cls__who">Henry</span></div>
+              <div class="cls"><span class="cls__time">9:00a</span><span class="cls__name">Flow Yoga</span><span class="cls__who">Kim</span></div>
+              <div class="cls"><span class="cls__time">6:00p</span><span class="cls__name">Hot Core Power Yoga</span><span class="cls__who">&nbsp;</span></div>
+            </div>
+          </div>
+
+          <div class="week__row" data-day="2">
+            <div class="week__day">Tue <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls"><span class="cls__time">9:00a</span><span class="cls__name">Flow Yoga</span><span class="cls__who">Dre</span></div>
+              <div class="cls"><span class="cls__time">6:00p</span><span class="cls__name">Vinyasa Flow</span><span class="cls__who">Jessica</span></div>
+            </div>
+          </div>
+
+          <div class="week__row" data-day="3">
+            <div class="week__day">Wed <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls cls--fit"><span class="cls__time">6:00a</span><span class="cls__name">Hump Day Fitness</span><span class="cls__who">Chelsea</span></div>
+              <div class="cls cls--fit"><span class="cls__time">8:00a</span><span class="cls__name">MetCon Fitness</span><span class="cls__who">Henry</span></div>
+              <div class="cls"><span class="cls__time">9:00a</span><span class="cls__name">Flow Yoga</span><span class="cls__who">Kim</span></div>
+              <div class="cls"><span class="cls__time">6:00p</span><span class="cls__name">Hot Core Power Yoga</span><span class="cls__who">Kim</span></div>
+            </div>
+          </div>
+
+          <div class="week__row" data-day="4">
+            <div class="week__day">Thu <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls"><span class="cls__time">5:30p</span><span class="cls__name">Restorative Yin</span><span class="cls__who">Andrea</span></div>
+            </div>
+          </div>
+
+          <div class="week__row" data-day="5">
+            <div class="week__day">Fri <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls cls--fit"><span class="cls__time">6:00a</span><span class="cls__name">TGIF Fitness</span><span class="cls__who">Chelsea</span></div>
+              <div class="cls cls--fit"><span class="cls__time">8:00a</span><span class="cls__name">MetCon Fitness</span><span class="cls__who">Henry</span></div>
+              <div class="cls"><span class="cls__time">9:00a</span><span class="cls__name">Flow Yoga</span><span class="cls__who">Kim</span></div>
+            </div>
+          </div>
+
+          <div class="week__row" data-day="6">
+            <div class="week__day">Sat <span class="week__badge">Today</span></div>
+            <div class="week__classes">
+              <div class="cls"><span class="cls__time">10:00a</span><span class="cls__name">Flow Yoga</span><span class="cls__who">Teacher rotation</span></div>
+            </div>
+          </div>
+
+          <div class="week__row week__row--rest" data-day="0">
+            <div class="week__day">Sun <span class="week__badge">Today</span></div>
+            <div class="week__rest">No classes &mdash; open climbing 12pm&ndash;5pm.</div>
+          </div>
+
+        </div>
+
+        <p class="note">Summer schedule &mdash; classes rotate seasonally. Questions? Email <a href="mailto:kim@gemstoneclimbing.rocks" style="color:var(--amethyst)">kim@gemstoneclimbing.rocks</a> or call (208) 329-7257 ext. 2.</p>
       </div>
     </section>
 
@@ -196,6 +215,6 @@
     </div>
     <p class="footer__note">Redesign mockup. Prices &amp; hours pulled from gemstoneclimbing.rocks — confirm with Gemstone before launch.</p>
   </footer>
-  <script src="main.js" defer></script>
+  <script src="main.js?v=2" defer></script>
 </body>
 </html>
