@@ -20,6 +20,13 @@
 
 *{box-sizing:border-box;margin:0}
 
+/* ── Icon system (inline SVG, inherits colour + font-size) ── */
+.ico{width:1em;height:1em;display:inline-block;vertical-align:-.15em;flex:none}
+.card__icon{font-size:2rem;color:var(--amethyst);line-height:1}
+.why__icon .ico{width:2rem;height:2rem}
+.deal h3 .ico,.waiver-band h3 .ico,.press h3 .ico,.hours-card h3 .ico{margin-right:2px}
+.ico--star{width:1em;height:1em}
+
 body{font-family:var(--font-body); color:var(--ink); background:var(--paper); line-height:1.55;}
 
 .container{max-width:var(--container);margin-inline:auto;padding-inline:20px}
@@ -51,16 +58,64 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .btn{display:inline-block;padding:11px 20px;border-radius:999px;font-family:var(--font-display);font-weight:700;text-decoration:none;cursor:pointer;border:none;font-size:1rem;white-space:nowrap}
 .btn--cta{background:var(--grad-cta);color:#fff;box-shadow:var(--shadow);transition:transform .15s ease}
 .btn--cta:hover{transform:scale(1.04)}
-@media (max-width:760px){.nav__links{display:none}}
-@media (max-width:380px){
+/* ── Mobile navigation ── */
+.nav__burger{display:none;background:none;border:0;color:#fff;cursor:pointer;
+  border-radius:12px;align-items:center;justify-content:center;
+  min-width:44px;min-height:44px;transition:background .2s ease}
+.nav__burger:hover{background:rgba(255,255,255,.12)}
+.nav__burger .ico{width:26px;height:26px}
+.nav__burger .ico--close{display:none}
+.nav.is-open .nav__burger .ico--open{display:none}
+.nav.is-open .nav__burger .ico--close{display:inline-block}
+
+@media (max-width:860px){
+  .nav__burger{display:inline-flex}
+  .nav__inner{gap:12px}
+  /* With JS the links become a drop-down panel; without JS they simply wrap
+     below the bar so every page stays reachable. */
+  .js .nav__links{
+    position:absolute;top:100%;left:0;right:0;
+    background:rgba(14,11,26,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid rgba(255,255,255,.08);
+    flex-direction:column;gap:0;padding:6px 20px 14px;display:none;
+    box-shadow:0 18px 40px rgba(0,0,0,.35)
+  }
+  .js .nav.is-open .nav__links{display:flex}
+  .js .nav__links a{padding:14px 4px;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
+  .js .nav__links a:last-child{border-bottom:0}
+  .no-js .nav__links{flex-wrap:wrap;gap:14px;width:100%;order:3;padding-bottom:12px}
+}
+@media (max-width:420px){
   .nav__logo{font-size:1.1rem}
-  .nav__book{padding:8px 14px;font-size:.85rem}
+  .nav__book{padding:9px 15px;font-size:.85rem}
+  .logo__sub{letter-spacing:.28em;font-size:.48rem}
 }
 
 /* ── Focus visibility (keyboard a11y) ── */
 a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
   outline: 3px solid var(--citrine);
   outline-offset: 2px;
+}
+
+/* Skip link — first tab stop for keyboard and screen-reader users */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--citrine);color:#0e0b1a;
+  padding:12px 20px;border-radius:0 0 12px 0;font-family:var(--font-display);font-weight:700}
+.skip:focus{left:0}
+
+/* ── Interaction feedback (hover-capable pointers only) ── */
+.pkg,.week__row,.gallery img,.faq__item{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,filter .25s ease}
+.faq__item summary{transition:color .2s ease}
+@media (hover:hover){
+  .pkg:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(20,10,40,.2)}
+  .rate-table tbody tr:hover{background:#faf8ff}
+  .faq__item:hover{border-color:#ddd0f5}
+  .faq__item summary:hover{color:var(--amethyst)}
+  .gallery img:hover{filter:saturate(1.12) brightness(1.03)}
+  .week__row:hover{box-shadow:0 12px 30px rgba(20,10,40,.14)}
+  .tag:hover{border-left-color:var(--magenta)}
+}
+@media (hover:hover) and (min-width:821px){
+  .pkg--popular:hover{transform:scale(1.04) translateY(-4px)}
 }
 
 /* ── Footer ── */
@@ -205,8 +260,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 
 .pkg__name{font-size:1.4rem}
 .pkg__price{font-family:var(--font-display);font-size:2.4rem;color:var(--amethyst);margin:4px 0 14px}
-.pkg__list{list-style:none;margin:0 0 22px;display:grid;gap:8px}
-.pkg__list li{color:var(--ink)}
+.pkg__list{list-style:none;margin:0 0 22px;display:grid;gap:9px}
+.pkg__list li{color:var(--ink);position:relative;padding-left:27px;line-height:1.45}
+.pkg__list li::before{content:'';position:absolute;left:0;top:.2em;width:17px;height:17px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat}
 .pkg .btn{margin-top:auto}
 .pkg__ribbon{position:absolute;top:14px;right:-6px;background:var(--grad-cta);color:#fff;padding:4px 14px;border-radius:6px;font-size:.8rem;font-family:var(--font-display);font-weight:700}
 .note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:18px}
@@ -278,7 +335,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   text-transform:uppercase;color:#0e0b1a;background:var(--citrine);
   border-radius:999px;padding:2px 10px;font-weight:700}
 .rating{text-align:center;margin-bottom:28px}
-.rating__stars{font-size:1.5rem;letter-spacing:2px}
+.rating__stars{font-size:1.5rem;color:var(--citrine);display:inline-flex;gap:4px}
 .rating__text{color:var(--muted);font-size:.9rem;margin-top:4px}
 .rating__text a{color:var(--amethyst)}
 

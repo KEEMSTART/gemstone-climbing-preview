@@ -5,6 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── 1. Reduced-motion guard ──────────────────────────────────────────────
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ── Mobile navigation ────────────────────────────────────────────────────
+  // Without JS the nav links simply wrap below the bar (see styles.css), so
+  // every page stays reachable either way.
+  const nav = document.querySelector('.nav');
+  const burger = nav && nav.querySelector('.nav__burger');
+  if (burger) {
+    const setOpen = (open) => {
+      nav.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    burger.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+    // Tapping a link or pressing Escape closes the panel.
+    nav.querySelectorAll('.nav__links a').forEach((a) =>
+      a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        setOpen(false);
+        burger.focus();
+      }
+    });
+  }
+
   // ── 2. Scroll-reveal ─────────────────────────────────────────────────────
   const reveals = document.querySelectorAll('.reveal');
   if (reduce || !('IntersectionObserver' in window)) {

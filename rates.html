@@ -10,13 +10,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e0b1a'/%3E%3Cpath d='M7 4.5h10l3.5 4.8-8.5 10.2L3.5 9.3z' fill='none' stroke='%23ffcb05' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M3.5 9.3h17' stroke='%23ffcb05' stroke-width='1.2'/%3E%3C/svg%3E">
+  <meta name="description" content="Day passes from $14, gear $7, memberships from $60/mo. Simple prices, walk-ins welcome, no surprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gemstone Climbing Center">
+  <meta property="og:title" content="Rates & Memberships — Gemstone Climbing">
+  <meta property="og:description" content="Day passes from $14, gear $7, memberships from $60/mo. Simple prices, walk-ins welcome, no surprises.">
+  <meta property="og:image" content="assets/photos/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rates & Memberships — Gemstone Climbing">
+  <meta name="twitter:description" content="Day passes from $14, gear $7, memberships from $60/mo. Simple prices, walk-ins welcome, no surprises.">
+  <meta name="twitter:image" content="assets/photos/og-cover.jpg">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Gemstone Climbing Center — home"><span class="logo__word">GEMST<svg class="logo__gem" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10l5 6-10 13L2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 9h20M7 3l2.5 6L12 3l2.5 6L17 3M9.5 9 12 22l2.5-13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>NE</span><span class="logo__sub">Climbing Center</span></a>
-      <nav class="nav__links">
+      <nav class="nav__links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="rates.html" aria-current="page">Rates</a>
         <a href="classes.html">Classes</a>
@@ -25,11 +37,12 @@
         <a href="adaptive.html">Adaptive</a>
         <a href="visit.html">Hours &amp; Contact</a>
       </nav>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg class="ico ico--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="ico ico--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
       <a class="btn btn--cta nav__book" href="parties.html">Book a Party</a>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- ── Page hero ── -->
     <section class="hero hero--page hero--rates">
@@ -66,7 +79,7 @@
 
         <div class="waiver-band">
           <div>
-            <h3>✍ Save time — do the waiver at home</h3>
+            <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Save time — do the waiver at home</h3>
             <p>It's free, online, and takes about two minutes. Every climber needs one, and kids need a parent or guardian to sign.</p>
           </div>
           <a class="btn btn--dark" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">Complete the Waiver</a>
@@ -81,21 +94,21 @@
         <p class="section__sub">Tap a deal to purchase online through our booking system.</p>
         <div class="deals">
           <a class="deal" href="https://app.rockgympro.com/b/?&bo=5d6b82f4620b4a5884ccf65056309714" target="_blank" rel="noopener">
-            <h3>🎉 Friday Night Teen Pass</h3>
+            <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg> Friday Night Teen Pass</h3>
             <p>Drop the teens off any Friday between 4pm and 9pm for wholesome fun and exercise.</p>
             <span class="deal__buy">Purchase online →</span>
           </a>
           <a class="deal" href="https://app.rockgympro.com/b/?&bo=aaace27e598f47829d0b3e59622bac7f" target="_blank" rel="noopener">
-            <h3>🎓 CSI Student Deal</h3>
+            <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> CSI Student Deal</h3>
             <p>Special College of Southern Idaho student pricing — good any time.</p>
             <span class="deal__buy">Purchase online →</span>
           </a>
           <div class="deal">
-            <h3>🌞 Summer Youth Happy Hour</h3>
+            <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Summer Youth Happy Hour</h3>
             <p>$10 for all youth 17 &amp; under, gear included. Mon–Fri 10am–4pm, Memorial Day–August.</p>
           </div>
           <a class="deal" href="https://app.rockgympro.com/b/?&bo=giftcard-e1d3fec8b7034754965eb4cd74bb321d" target="_blank" rel="noopener">
-            <h3>🎁 Gift Cards</h3>
+            <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg> Gift Cards</h3>
             <p>The easiest gift for the climber (or future climber) in your life.</p>
             <span class="deal__buy">Buy a gift card →</span>
           </a>
@@ -153,9 +166,9 @@
             <table class="rate-table">
               <caption>Good to know</caption>
               <tbody>
-                <tr><td>✍ Waiver required for every climber — <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">sign online</a></td><td></td></tr>
-                <tr><td>👟 Wear socks for rental shoes</td><td></td></tr>
-                <tr><td>🧗 Belay class included with any day pass or membership</td><td></td></tr>
+                <tr><td><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Waiver required for every climber — <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">sign online</a></td><td></td></tr>
+                <tr><td><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.4C4 11.5 3 10.5 3 8c0-2.7 1.5-6 4.5-6C9.4 2 10 3.8 10 5.5c0 3.1-2 5.7-2 8.7V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.4c0-2.1 1-3.1 1-5.6 0-2.7-1.5-6-4.5-6C14.6 6 14 7.8 14 9.5c0 3.1 2 5.7 2 8.7V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg> Wear socks for rental shoes</td><td></td></tr>
+                <tr><td><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Belay class included with any day pass or membership</td><td></td></tr>
                 <tr><td>*Discount rate: youth, students, military, seniors, first responders &amp; front-line workers</td><td></td></tr>
               </tbody>
             </table>
@@ -176,12 +189,12 @@
             <h3 class="pkg__name">Monthly</h3>
             <p class="pkg__price">$60<span style="font-size:1rem;color:var(--muted)">/mo</span></p>
             <ul class="pkg__list">
-              <li>✓ Unlimited climbing</li>
-              <li>✓ Free yoga &amp; fitness classes</li>
-              <li>✓ Member-only morning hours</li>
-              <li>✓ Discount rate* $55/mo</li>
-              <li>✓ Family of 2: $100/mo (+$25 each addl.)</li>
-              <li>✓ 6-month minimum · $30 enrollment</li>
+              <li>Unlimited climbing</li>
+              <li>Free yoga &amp; fitness classes</li>
+              <li>Member-only morning hours</li>
+              <li>Discount rate* $55/mo</li>
+              <li>Family of 2: $100/mo (+$25 each addl.)</li>
+              <li>6-month minimum · $30 enrollment</li>
             </ul>
             <a class="btn btn--cta" href="visit.html">Ask About Joining</a>
           </div>
@@ -191,11 +204,11 @@
             <h3 class="pkg__name">Annual</h3>
             <p class="pkg__price">$600<span style="font-size:1rem;color:var(--muted)">/yr</span></p>
             <ul class="pkg__list">
-              <li>✓ Everything in Monthly</li>
-              <li>✓ Two months free vs. paying monthly</li>
-              <li>✓ Discount rate* $550/yr</li>
-              <li>✓ Family of 2: $1,000/yr (+$250 each addl.)</li>
-              <li>✓ One-time $30 enrollment</li>
+              <li>Everything in Monthly</li>
+              <li>Two months free vs. paying monthly</li>
+              <li>Discount rate* $550/yr</li>
+              <li>Family of 2: $1,000/yr (+$250 each addl.)</li>
+              <li>One-time $30 enrollment</li>
             </ul>
             <a class="btn btn--cta" href="visit.html">Ask About Joining</a>
           </div>
@@ -204,11 +217,11 @@
             <h3 class="pkg__name">30-Day Pass</h3>
             <p class="pkg__price">$85</p>
             <ul class="pkg__list">
-              <li>✓ Unlimited climbing for 30 days</li>
-              <li>✓ No enrollment fee, no commitment</li>
-              <li>✓ Discount rate* $80</li>
-              <li>✓ Family of 2: $150</li>
-              <li>✓ Great for trying us out</li>
+              <li>Unlimited climbing for 30 days</li>
+              <li>No enrollment fee, no commitment</li>
+              <li>Discount rate* $80</li>
+              <li>Family of 2: $150</li>
+              <li>Great for trying us out</li>
             </ul>
             <a class="btn btn--cta" href="visit.html">Ask About Joining</a>
           </div>
@@ -221,7 +234,7 @@
     <section class="cta-band">
       <div class="container">
         <h2>Ready to climb?</h2>
-        <p class="cta-band__phone"><a href="tel:+12083297257">📞 (208) 329-7257</a></p>
+        <p class="cta-band__phone"><a href="tel:+12083297257"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (208) 329-7257</a></p>
         <div class="hero__cta">
           <a class="btn btn--cta" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">Sign the Waiver</a>
           <a class="btn btn--ghost" href="visit.html">Hours &amp; Directions</a>
@@ -251,12 +264,12 @@
         <p>
           <a class="contact-link" href="visit.html">Hours &amp; contact</a><br>
           <a class="contact-link" href="rates.html">Rates &amp; memberships</a><br>
-          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">✍ Sign the waiver</a>
+          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Sign the waiver</a>
         </p>
       </div>
     </div>
     <p class="footer__note">Redesign mockup. Prices &amp; hours pulled from gemstoneclimbing.rocks — confirm with Gemstone before launch.</p>
   </footer>
-  <script src="main.js?v=2" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>

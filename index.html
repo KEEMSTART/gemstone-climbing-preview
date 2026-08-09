@@ -10,13 +10,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e0b1a'/%3E%3Cpath d='M7 4.5h10l3.5 4.8-8.5 10.2L3.5 9.3z' fill='none' stroke='%23ffcb05' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M3.5 9.3h17' stroke='%23ffcb05' stroke-width='1.2'/%3E%3C/svg%3E">
+  <meta name="description" content="Southern Idaho's only indoor climbing gym. Bouldering, top rope, 10 auto-belays, yoga & fitness — and the most fun birthday in town.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gemstone Climbing Center">
+  <meta property="og:title" content="Gemstone Climbing Center — Twin Falls, Idaho">
+  <meta property="og:description" content="Southern Idaho's only indoor climbing gym. Bouldering, top rope, 10 auto-belays, yoga & fitness — and the most fun birthday in town.">
+  <meta property="og:image" content="assets/photos/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gemstone Climbing Center — Twin Falls, Idaho">
+  <meta name="twitter:description" content="Southern Idaho's only indoor climbing gym. Bouldering, top rope, 10 auto-belays, yoga & fitness — and the most fun birthday in town.">
+  <meta name="twitter:image" content="assets/photos/og-cover.jpg">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Gemstone Climbing Center — home"><span class="logo__word">GEMST<svg class="logo__gem" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10l5 6-10 13L2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 9h20M7 3l2.5 6L12 3l2.5 6L17 3M9.5 9 12 22l2.5-13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>NE</span><span class="logo__sub">Climbing Center</span></a>
-      <nav class="nav__links">
+      <nav class="nav__links" id="nav-links">
         <a href="index.html" aria-current="page">Home</a>
         <a href="rates.html">Rates</a>
         <a href="classes.html">Classes</a>
@@ -25,19 +37,16 @@
         <a href="adaptive.html">Adaptive</a>
         <a href="visit.html">Hours &amp; Contact</a>
       </nav>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg class="ico ico--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="ico ico--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
       <a class="btn btn--cta nav__book" href="parties.html">Book a Party</a>
     </div>
   </header>
-  <main>
+  <main id="main">
 
     <!-- ── Section 1: Hero ── -->
     <section class="hero hero--home">
       <!-- Decorative gem facet shapes -->
-      <svg class="hero__deco hero__deco--1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" width="160" height="180"><polygon points="80,0 160,50 160,130 80,180 0,130 0,50" fill="rgba(255,255,255,0.07)"/><polygon points="80,0 160,50 80,90" fill="rgba(255,255,255,0.05)"/><polygon points="0,130 80,180 80,90" fill="rgba(255,255,255,0.04)"/></svg>
-      <svg class="hero__deco hero__deco--2" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140"><polygon points="60,0 120,40 120,100 60,140 0,100 0,40" fill="rgba(255,203,5,0.08)"/><polygon points="60,0 120,40 60,70" fill="rgba(255,203,5,0.06)"/></svg>
-      <svg class="hero__deco hero__deco--3" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="38" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="40" cy="40" r="20" fill="rgba(255,45,155,0.07)"/></svg>
-      <svg class="hero__deco hero__deco--4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" width="60" height="70"><polygon points="30,0 60,20 60,50 30,70 0,50 0,20" fill="rgba(16,185,129,0.09)"/></svg>
-      <div class="container hero__inner">
+      <svg class="hero__deco hero__deco--1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" width="160" height="180"><polygon points="80,0 160,50 160,130 80,180 0,130 0,50" fill="rgba(255,255,255,0.07)"/><polygon points="80,0 160,50 80,90" fill="rgba(255,255,255,0.05)"/><polygon points="0,130 80,180 80,90" fill="rgba(255,255,255,0.04)"/></svg> <svg class="hero__deco hero__deco--2" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140"><polygon points="60,0 120,40 120,100 60,140 0,100 0,40" fill="rgba(255,203,5,0.08)"/><polygon points="60,0 120,40 60,70" fill="rgba(255,203,5,0.06)"/></svg> <svg class="hero__deco hero__deco--3" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="38" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="40" cy="40" r="20" fill="rgba(255,45,155,0.07)"/></svg> <svg class="hero__deco hero__deco--4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" width="60" height="70"><polygon points="30,0 60,20 60,50 30,70 0,50 0,20" fill="rgba(16,185,129,0.09)"/></svg> <div class="container hero__inner">
         <p class="eyebrow">Twin Falls · All ages · All abilities</p>
         <h1 class="hero__title">Climb higher.<br>Celebrate louder.</h1>
         <p class="hero__sub">Southern Idaho's only indoor climbing gym — and the most fun birthday in town.</p>
@@ -51,11 +60,11 @@
     <!-- ── Section 2: Party teaser band ── -->
     <section class="teaser reveal">
       <div class="container teaser__inner">
-        <h2>The most fun birthday in Twin Falls 🎉</h2>
+        <h2>The most fun birthday in Twin Falls <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg></h2>
         <ul class="teaser__points">
-          <li>🧗 Gear &amp; a private belayer included</li>
-          <li>🎈 Private party room for 2 hours</li>
-          <li>👕 Birthday kid gets a free Gemstone tee</li>
+          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Gear &amp; a private belayer included</li>
+          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3M13 20h9"/><path d="M13 4.6v16.2a1 1 0 0 1-1.24.97L5 20V5.6a2 2 0 0 1 1.5-1.94l4-1A2 2 0 0 1 13 4.6Z"/></svg> Private party room for 2 hours</li>
+          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg> Birthday kid gets a free Gemstone tee</li>
         </ul>
         <a class="btn btn--cta" href="parties.html">See Party Packages</a>
       </div>
@@ -68,37 +77,37 @@
         <p class="section__sub">Whether you're a total beginner or a seasoned crusher, we've got your next challenge.</p>
         <div class="cards">
           <div class="card">
-            <div class="card__icon">🧗</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></div>
             <h3>Bouldering</h3>
             <p>4,000+ sq ft of bouldering, grades V0–V10.</p>
           </div>
           <div class="card">
-            <div class="card__icon">🤖</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <h3>10 Auto-Belays</h3>
             <p>Climb solo — no partner needed, ten auto-belay stations.</p>
           </div>
           <div class="card">
-            <div class="card__icon">🧗‍♀️</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
             <h3>Top Rope</h3>
             <p>Roped climbing from 5.5 to 5.11d for every level.</p>
           </div>
           <div class="card">
-            <div class="card__icon">⛰️</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></div>
             <h3>Lead Climbing</h3>
             <p>Lead routes and overhang for climbers ready to send.</p>
           </div>
           <div class="card">
-            <div class="card__icon">🧘</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/><path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/></svg></div>
             <h3>Yoga &amp; Fitness</h3>
             <p>Gentle to hot power yoga, plus fitness classes.</p>
           </div>
           <div class="card">
-            <div class="card__icon">👧</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <h3>Youth &amp; Adult Instruction</h3>
             <p>Classes and coaching for first-timers to regulars.</p>
           </div>
           <div class="card">
-            <div class="card__icon">♿</div>
+            <div class="card__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg></div>
             <h3>Adaptive Climbing</h3>
             <p>Programs so everyone gets on the wall. Fully ADA accessible.</p>
           </div>
@@ -129,19 +138,19 @@
         <h2>Why families pick Gemstone</h2>
         <div class="why__grid">
           <div class="why__item">
-            <span class="why__icon">🏔️</span>
+            <span class="why__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
             <strong>Only indoor gym in S. Idaho</strong>
           </div>
           <div class="why__item">
-            <span class="why__icon">♿</span>
+            <span class="why__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg></span>
             <strong>Fully ADA accessible</strong>
           </div>
           <div class="why__item">
-            <span class="why__icon">🤝</span>
+            <span class="why__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <strong>Trained, friendly staff</strong>
           </div>
           <div class="why__item">
-            <span class="why__icon">👨‍👩‍👧‍👦</span>
+            <span class="why__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <strong>All ages &amp; abilities welcome</strong>
           </div>
         </div>
@@ -153,7 +162,7 @@
       <div class="container">
         <h2>Climbers love us</h2>
         <div class="rating">
-          <div class="rating__stars" aria-hidden="true">★★★★☆</div>
+          <div class="rating__stars" aria-hidden="true"><svg class="ico ico--star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="halfstar"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" fill="url(#halfstar)" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <p class="rating__text">
             Rated <strong>4.5 out of 5</strong> —
             <a href="https://www.indoorclimbinggym.com/gyms/gemstone-climbing-center-twin-falls/" target="_blank" rel="noopener">as listed on IndoorClimbingGym.com</a>
@@ -198,12 +207,12 @@
         <p>
           <a class="contact-link" href="visit.html">Hours &amp; contact</a><br>
           <a class="contact-link" href="rates.html">Rates &amp; memberships</a><br>
-          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">✍ Sign the waiver</a>
+          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Sign the waiver</a>
         </p>
       </div>
     </div>
     <p class="footer__note">Redesign mockup. Prices &amp; hours pulled from gemstoneclimbing.rocks — confirm with Gemstone before launch.</p>
   </footer>
-  <script src="main.js?v=2" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>

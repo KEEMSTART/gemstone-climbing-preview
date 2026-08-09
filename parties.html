@@ -10,13 +10,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e0b1a'/%3E%3Cpath d='M7 4.5h10l3.5 4.8-8.5 10.2L3.5 9.3z' fill='none' stroke='%23ffcb05' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M3.5 9.3h17' stroke='%23ffcb05' stroke-width='1.2'/%3E%3C/svg%3E">
+  <meta name="description" content="Two hours, gear for every climber, a private party room and your own belayer. Parties from $100 — book at least 5 days ahead.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gemstone Climbing Center">
+  <meta property="og:title" content="Birthday Parties at Gemstone Climbing">
+  <meta property="og:description" content="Two hours, gear for every climber, a private party room and your own belayer. Parties from $100 — book at least 5 days ahead.">
+  <meta property="og:image" content="assets/photos/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Birthday Parties at Gemstone Climbing">
+  <meta name="twitter:description" content="Two hours, gear for every climber, a private party room and your own belayer. Parties from $100 — book at least 5 days ahead.">
+  <meta name="twitter:image" content="assets/photos/og-cover.jpg">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Gemstone Climbing Center — home"><span class="logo__word">GEMST<svg class="logo__gem" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10l5 6-10 13L2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 9h20M7 3l2.5 6L12 3l2.5 6L17 3M9.5 9 12 22l2.5-13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>NE</span><span class="logo__sub">Climbing Center</span></a>
-      <nav class="nav__links">
+      <nav class="nav__links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="rates.html">Rates</a>
         <a href="classes.html">Classes</a>
@@ -25,17 +37,18 @@
         <a href="adaptive.html">Adaptive</a>
         <a href="visit.html">Hours &amp; Contact</a>
       </nav>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg class="ico ico--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="ico ico--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
       <a class="btn btn--cta nav__book" href="parties.html">Book a Party</a>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- ── Section 1: Party Hero ── -->
     <section class="hero hero--party" id="party-hero">
       <div class="container hero__inner">
         <p class="eyebrow">Birthday parties &amp; group events</p>
-        <h1 class="hero__title">Birthdays that rock. 🎉</h1>
+        <h1 class="hero__title">Birthdays that rock. <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg></h1>
         <p class="hero__sub">You bring the cake — we bring the gear, the party room, and a private belayer. Parents relax, kids climb.</p>
         <a class="btn btn--cta" href="#request">Request Your Party Date</a>
       </div>
@@ -54,12 +67,12 @@
             <h3 class="pkg__name">School-Year Party</h3>
             <p class="pkg__price">$138<span style="font-size:.95rem;color:var(--muted)"> +tax</span></p>
             <ul class="pkg__list">
-              <li>✓ Covers your first 6 climbers</li>
-              <li>✓ 2 hours of climbing + party room</li>
-              <li>✓ Rental gear for every climber</li>
-              <li>✓ Private belayer / party helper</li>
-              <li>✓ Free Gemstone tee for the birthday kid</li>
-              <li>✓ Extra climbers just $18 each</li>
+              <li>Covers your first 6 climbers</li>
+              <li>2 hours of climbing + party room</li>
+              <li>Rental gear for every climber</li>
+              <li>Private belayer / party helper</li>
+              <li>Free Gemstone tee for the birthday kid</li>
+              <li>Extra climbers just $18 each</li>
             </ul>
             <a class="btn btn--cta" href="#request">Request a Date</a>
           </div>
@@ -70,12 +83,12 @@
             <h3 class="pkg__name">Summer Party</h3>
             <p class="pkg__price">$100</p>
             <ul class="pkg__list">
-              <li>✓ Covers your first 6 kids</li>
-              <li>✓ 2 hours of climbing + party room</li>
-              <li>✓ Rental gear for every climber</li>
-              <li>✓ Private belayer included</li>
-              <li>✓ Free Gemstone tee for the birthday kid</li>
-              <li>✓ Extra kids $15 each — up to 10 total</li>
+              <li>Covers your first 6 kids</li>
+              <li>2 hours of climbing + party room</li>
+              <li>Rental gear for every climber</li>
+              <li>Private belayer included</li>
+              <li>Free Gemstone tee for the birthday kid</li>
+              <li>Extra kids $15 each — up to 10 total</li>
             </ul>
             <a class="btn btn--cta" href="#request">Request a Date</a>
           </div>
@@ -83,10 +96,10 @@
         </div>
 
         <div class="facts">
-          <span class="fact">💵 $100 deposit locks your date</span>
-          <span class="fact">📅 Book at least 5 days ahead</span>
-          <span class="fact">🍕 Arrive 10 min early to set up food</span>
-          <span class="fact">✍ Every guest needs a <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">waiver</a></span>
+          <span class="fact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg> $100 deposit locks your date</span>
+          <span class="fact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Book at least 5 days ahead</span>
+          <span class="fact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2"/><path d="M6 11v11"/><path d="M18 2c-2 0-3 2-3 5v6h3v9"/></svg> Arrive 10 min early to set up food</span>
+          <span class="fact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Every guest needs a <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">waiver</a></span>
         </div>
         <p class="note">Party room comes stocked with plates, napkins, utensils and cups. Prices from gemstoneclimbing.rocks — confirm when booking.</p>
       </div>
@@ -151,7 +164,7 @@
               <tr><td>Party room, 2 hours</td><td class="price">$30</td></tr>
               <tr><td>Private belayer, 1–2 hours</td><td class="price">$30–$60</td></tr>
             </tbody>
-            <tfoot><tr><td colspan="2">🎁 Book 10+ climbers in advance and we waive the gear rental fee.</td></tr></tfoot>
+            <tfoot><tr><td colspan="2"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg> Book 10+ climbers in advance and we waive the gear rental fee.</td></tr></tfoot>
           </table>
         </div>
       </div>
@@ -165,7 +178,7 @@
 
         <div class="photo-slot photo-slot--lg">
           <div>
-            <span class="photo-slot__icon">📸</span>
+            <span class="photo-slot__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
             <strong>Photo of the party room goes here</strong>
             <span class="photo-slot__hint">Wide shot, lights on, table set up for a party</span>
           </div>
@@ -174,21 +187,21 @@
         <div class="photo-slots">
           <div class="photo-slot">
             <div>
-              <span class="photo-slot__icon">🎂</span>
+              <span class="photo-slot__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3M12 8v3M17 8v3"/></svg></span>
               <strong>Cake &amp; table moment</strong>
               <span class="photo-slot__hint">Kids around the table mid-celebration</span>
             </div>
           </div>
           <div class="photo-slot">
             <div>
-              <span class="photo-slot__icon">🧗</span>
+              <span class="photo-slot__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
               <strong>Group of kids on the wall</strong>
               <span class="photo-slot__hint">Several climbing at once, staff host visible</span>
             </div>
           </div>
           <div class="photo-slot">
             <div>
-              <span class="photo-slot__icon">🏅</span>
+              <span class="photo-slot__icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg></span>
               <strong>Birthday kid topping out</strong>
               <span class="photo-slot__hint">Arms up at the top, friends cheering below</span>
             </div>
@@ -253,7 +266,7 @@
     <section class="cta-band" id="request">
       <div class="container">
         <h2>Ready to book the best birthday ever?</h2>
-        <p class="cta-band__phone"><a href="tel:+12083297257">📞 (208) 329-7257</a></p>
+        <p class="cta-band__phone"><a href="tel:+12083297257"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (208) 329-7257</a></p>
         <div class="request-form">
           <form onsubmit="return false">
             <label>
@@ -307,12 +320,12 @@
         <p>
           <a class="contact-link" href="visit.html">Hours &amp; contact</a><br>
           <a class="contact-link" href="rates.html">Rates &amp; memberships</a><br>
-          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">✍ Sign the waiver</a>
+          <a class="contact-link" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Sign the waiver</a>
         </p>
       </div>
     </div>
     <p class="footer__note">Redesign mockup. Prices &amp; hours pulled from gemstoneclimbing.rocks — confirm with Gemstone before launch.</p>
   </footer>
-  <script src="main.js?v=2" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>
