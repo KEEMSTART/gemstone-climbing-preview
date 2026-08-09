@@ -72,15 +72,47 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .footer__note{text-align:center;color:#7d749c;font-size:.82rem;margin-top:32px}
 @media (max-width:760px){.footer__grid{grid-template-columns:1fr;gap:24px}}
 
-/* ── Hero ── */
+/* ── Hero ──
+   Photo lives on ::before so it can be transformed/animated; the jewel tint
+   sits on ::after above it. Each page sets --hero-img / --hero-pos / --hero-tint. */
 .hero{
-  background:
-    linear-gradient(120deg, rgba(123,47,247,.85), rgba(37,99,235,.62) 55%, rgba(16,185,129,.7)),
-    linear-gradient(rgba(14,11,26,.28), rgba(14,11,26,.5)),
-    url('assets/photos/home-hero.jpg') center 55%/cover no-repeat;
+  background:var(--rock-2);
   color:#fff;padding:120px 0;text-align:center;position:relative;overflow:hidden;
 }
-.hero__inner{position:relative;z-index:1}
+.hero::before{
+  content:'';position:absolute;inset:-8%;z-index:0;
+  background-image:var(--hero-img);
+  background-position:var(--hero-pos, center 50%);
+  background-size:cover;background-repeat:no-repeat;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:
+    var(--hero-tint, linear-gradient(120deg, rgba(123,47,247,.85), rgba(37,99,235,.62) 55%, rgba(16,185,129,.7))),
+    linear-gradient(rgba(14,11,26,.30), rgba(14,11,26,.52));
+}
+.hero__inner{position:relative;z-index:3}
+
+/* Per-page hero photography */
+.hero--home{--hero-img:url('assets/photos/home-hero.jpg');--hero-pos:center 55%}
+.hero--rates{--hero-img:url('assets/photos/hero-rates.jpg');--hero-pos:center 45%}
+.hero--classes{--hero-img:url('assets/photos/hero-classes.jpg');--hero-pos:center 72%;
+  --hero-tint:linear-gradient(120deg, rgba(123,47,247,.84), rgba(37,99,235,.76))}
+.hero--yoga{--hero-img:url('assets/photos/hero-yoga.jpg');--hero-pos:center 50%;
+  --hero-tint:linear-gradient(120deg, rgba(37,99,235,.82), rgba(16,185,129,.78))}
+.hero--visit{--hero-img:url('assets/photos/hero-visit.jpg');--hero-pos:center 45%;
+  --hero-tint:linear-gradient(120deg, rgba(26,20,48,.86), rgba(123,47,247,.74))}
+.hero--adaptive{--hero-img:url('assets/photos/hero-adaptive.jpg');--hero-pos:center 48%;
+  --hero-tint:linear-gradient(120deg, rgba(37,99,235,.8), rgba(16,185,129,.76))}
+
+/* Slow drifting zoom on the homepage hero (Ken Burns) */
+@keyframes heroDrift{
+  0%   {transform:scale(1.04) translate3d(-1.2%, 0.4%, 0)}
+  50%  {transform:scale(1.13) translate3d(1.2%, -0.8%, 0)}
+  100% {transform:scale(1.04) translate3d(-1.2%, 0.4%, 0)}
+}
+.hero--home::before{animation:heroDrift 42s ease-in-out infinite;will-change:transform}
+@media (prefers-reduced-motion: reduce){.hero--home::before{animation:none}}
 .hero__title{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:6px 0}
 .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;opacity:.9;font-weight:600}
 .hero__sub{font-size:1.2rem;max-width:620px;margin:16px auto 28px;opacity:.95}
@@ -88,8 +120,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .btn--ghost{border:2px solid rgba(255,255,255,.7);color:#fff;background:transparent;transition:background .2s ease,color .2s ease}
 .btn--ghost:hover{background:rgba(255,255,255,.15)}
 
-/* Decorative gem shapes */
-.hero__deco{position:absolute;pointer-events:none;user-select:none}
+/* Decorative gem shapes — sit above the tint, below the text */
+.hero__deco{position:absolute;pointer-events:none;user-select:none;z-index:2}
 .hero__deco--1{bottom:-20px;right:-40px;transform:rotate(15deg)}
 .hero__deco--2{top:-10px;left:-30px;transform:rotate(-10deg)}
 .hero__deco--3{top:30px;right:12%;transform:rotate(20deg)}
@@ -160,12 +192,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
    ════════════════════════════════════════════════════ */
 
 /* ── Party hero ── */
-.hero--party{
-  background:
-    linear-gradient(120deg, rgba(255,45,155,.78), rgba(123,47,247,.8)),
-    linear-gradient(rgba(14,11,26,.18), rgba(14,11,26,.42)),
-    url('assets/photos/party-hero.jpg') center 55%/cover no-repeat;
-}
+.hero--party{--hero-img:url('assets/photos/party-hero.jpg');--hero-pos:center 55%;
+  --hero-tint:linear-gradient(120deg, rgba(255,45,155,.78), rgba(123,47,247,.8))}
 
 /* ── Package cards ── */
 .cards--pkg{grid-template-columns:repeat(3,1fr)}
@@ -259,11 +287,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
    ════════════════════════════════════════════════════ */
 
 /* Compact page hero for interior pages */
-.hero--page{padding:64px 0}
+.hero--page{padding:76px 0}
 .hero--page .hero__title{font-size:clamp(2rem,5vw,3.2rem)}
-.hero--yoga{background:linear-gradient(120deg, var(--sapphire), var(--emerald))}
-.hero--classes{background:linear-gradient(120deg, var(--amethyst), var(--sapphire))}
-.hero--visit{background:linear-gradient(120deg, var(--rock-2), var(--amethyst))}
 
 /* Active nav link */
 .nav__links a[aria-current="page"]{color:var(--citrine)}
