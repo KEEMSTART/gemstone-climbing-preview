@@ -9,17 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
-      <a class="nav__logo" href="index.html">💎 Gemstone</a>
+      <a class="nav__logo" href="index.html" aria-label="Gemstone Climbing Center — home"><span class="logo__word">GEMST<svg class="logo__gem" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10l5 6-10 13L2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 9h20M7 3l2.5 6L12 3l2.5 6L17 3M9.5 9 12 22l2.5-13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>NE</span><span class="logo__sub">Climbing Center</span></a>
       <nav class="nav__links">
+        <a href="index.html">Home</a>
         <a href="rates.html">Rates</a>
         <a href="classes.html" aria-current="page">Classes</a>
         <a href="yoga-fitness.html">Yoga &amp; Fitness</a>
         <a href="parties.html">Parties</a>
+        <a href="adaptive.html">Adaptive</a>
         <a href="visit.html">Hours &amp; Contact</a>
       </nav>
       <a class="btn btn--cta nav__book" href="parties.html">Book a Party</a>
@@ -34,73 +36,74 @@
         <p class="eyebrow">Climbing instruction</p>
         <h1 class="hero__title">Learn the ropes. Literally.</h1>
         <p class="hero__sub">From your first knot to your first lead climb — friendly instruction at every level.</p>
+        <a class="btn btn--cta" href="https://app.rockgympro.com/b/?&bw=7004e7a0c71f44afab94ce56cd34a6df" target="_blank" rel="noopener">See Upcoming Classes &amp; Sign Up</a>
       </div>
     </section>
 
-    <!-- ── Free belay classes callout ── -->
-    <section class="section">
+    <!-- ── Free belay classes ── -->
+    <section class="section section--tight">
       <div class="container">
         <div class="waiver-band">
           <div>
-            <h3>🪢 Belay classes are FREE</h3>
-            <p>Learn to belay at no cost — it's the skill that unlocks top rope climbing with your friends and family. Just ask at the front desk or call ahead.</p>
+            <h3>🪢 Learn How to Belay — FREE</h3>
+            <p>Free for members, or free with any day pass. Runs every other Friday through the summer — it's the skill that unlocks roped climbing with your crew.</p>
           </div>
-          <a class="btn btn--dark" href="tel:+12083297257">Call to Schedule</a>
+          <a class="btn btn--dark" href="https://app.rockgympro.com/b/?&bw=7004e7a0c71f44afab94ce56cd34a6df" target="_blank" rel="noopener">See Dates &amp; Sign Up</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Private lessons ── -->
-    <section class="section reveal" style="padding-top:0">
+    <!-- ── Adult classes ── -->
+    <section class="section section--tight reveal" id="adult">
       <div class="container">
-        <h2>Private lessons</h2>
-        <p class="section__sub">One-on-one instruction, gear provided. Members $50/hour · non-members $60/hour.</p>
+        <h2>Adult classes</h2>
+        <p class="section__sub">Private instruction with gear provided — book online or email Kim.</p>
         <div class="cards">
+          <div class="card">
+            <div class="card__icon">🤝</div>
+            <h3>Intro to Climbing — for 2</h3>
+            <p><strong style="color:var(--amethyst)">$60 · private lesson for 2 people.</strong> Just you, your partner, and an expert coach. No experience? No problem.</p>
+          </div>
           <div class="card">
             <div class="card__icon">🧗‍♀️</div>
             <h3>Intro to Top Rope</h3>
-            <p>Entry-level class covering everything you need to start top roping. Belay skills required first — take our free belay class.</p>
+            <p><strong style="color:var(--amethyst)">$50/hr members · $60/hr non-members.</strong> Private entry-level class to get you top roping. Belay skills first — the belay class is free.</p>
           </div>
           <div class="card">
             <div class="card__icon">🪨</div>
             <h3>Intro to Bouldering</h3>
-            <p>Learn to boulder from the ground up. No prerequisites, no ropes — just you and the wall.</p>
+            <p><strong style="color:var(--amethyst)">$50/hr members · $60/hr non-members.</strong> Private class, no prerequisites, no ropes — just you and the wall.</p>
           </div>
           <div class="card">
             <div class="card__icon">⚡</div>
             <h3>Learn to Lead</h3>
-            <p>Two-day class (2 hours each day). Requires: climb a solid 5.10b, top-rope belay certification, ATC proficiency, and 14+ years old. Certification test 24 hours after the course.</p>
+            <p>Two-day class, 2 hours each day. Requires a solid 5.10b, top-rope belay certification, ATC proficiency, ages 14+. Cert test 24 hours after the course.</p>
           </div>
-        </div>
-        <div class="facts">
-          <span class="fact">🎒 Gear provided</span>
-          <span class="fact">👤 Private lesson format</span>
-          <span class="fact">💵 $50/hr members · $60/hr non-members</span>
         </div>
       </div>
     </section>
 
-    <!-- ── Youth ── -->
-    <section class="section reveal" style="padding-top:0">
+    <!-- ── Youth classes ── -->
+    <section class="section section--tight reveal" id="youth">
       <div class="container">
-        <h2>Young climbers</h2>
-        <p class="section__sub">Kids' programs run through the year — check the kids' calendar or ask the front desk.</p>
-        <div class="cards">
+        <h2>Youth classes</h2>
+        <p class="section__sub">Fall session starts September 1st — spots are limited.</p>
+        <div class="cards cards--pkg2">
           <div class="card">
-            <div class="card__icon">👧</div>
-            <h3>Youth instruction</h3>
-            <p>Coaching for young climbers of every experience level, aligned with school-year and summer schedules.</p>
+            <div class="card__icon">🦎</div>
+            <h3>Komodo Dragons <span style="color:var(--muted);font-size:.85rem;font-family:var(--font-body)">· ages 5–10</span></h3>
+            <p><strong style="color:var(--amethyst)">Tuesdays &amp; Thursdays, 4:30–5:30pm.</strong> Beginner climbing class — build skills, make friends, and love the climb. No experience needed, just a smile and a sense of adventure.</p>
           </div>
           <div class="card">
-            <div class="card__icon">♿</div>
-            <h3>Adaptive climbing</h3>
-            <p>Programs so every body gets on the wall — the gym is fully ADA accessible.</p>
+            <div class="card__icon">🏔️</div>
+            <h3>REC Climbing Team <span style="color:var(--muted);font-size:.85rem;font-family:var(--font-body)">· teens &amp; young adults</span></h3>
+            <p><strong style="color:var(--amethyst)">$120/month · Mondays &amp; Wednesdays, 5:00–6:30pm.</strong> Build strength, boost confidence, be part of a team — supportive coaches and lifelong friendships.</p>
           </div>
-          <div class="card">
-            <div class="card__icon">🎂</div>
-            <h3>Birthday parties</h3>
-            <p>The easiest way for a group of kids to try climbing. <a href="parties.html" style="color:var(--amethyst)">See party packages →</a></p>
-          </div>
+        </div>
+        <div class="facts">
+          <span class="fact">📅 Fall session starts September 1st</span>
+          <span class="fact">🎟️ Spaces are limited</span>
+          <span class="fact">♿ Adaptive program? <a href="adaptive.html" style="color:var(--amethyst)">It has its own page →</a></span>
         </div>
       </div>
     </section>
@@ -108,12 +111,12 @@
     <!-- ── How to book ── -->
     <section class="cta-band">
       <div class="container">
-        <h2>Book a lesson</h2>
-        <p class="hero__sub">Call, or email Kim to find a time that works.</p>
+        <h2>Sign up for a class</h2>
+        <p class="hero__sub">Browse upcoming class dates and pay online — or email Kim with questions.</p>
         <p class="cta-band__phone"><a href="tel:+12083297257">📞 (208) 329-7257</a></p>
         <div class="hero__cta">
-          <a class="btn btn--cta" href="mailto:kim@gemstoneclimbing.rocks">Email Kim</a>
-          <a class="btn btn--ghost" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">Sign the Waiver First</a>
+          <a class="btn btn--cta" href="https://app.rockgympro.com/b/?&bw=7004e7a0c71f44afab94ce56cd34a6df" target="_blank" rel="noopener">Classes Calendar &amp; Sign-Up</a>
+          <a class="btn btn--ghost" href="mailto:kim@gemstoneclimbing.rocks">Email Kim</a>
         </div>
       </div>
     </section>

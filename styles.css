@@ -41,8 +41,12 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .nav{position:sticky;top:0;z-index:50;background:rgba(14,11,26,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
 .nav__logo{color:#fff;font-family:var(--font-display);font-weight:800;font-size:1.3rem;text-decoration:none;white-space:nowrap}
-.nav__links{display:flex;gap:22px}
-.nav__links a{color:#e7e1f5;text-decoration:none;font-weight:600;font-size:.95rem}
+/* Brand wordmark: GEMST♦NE / CLIMBING CENTER (recreates the real logo) */
+.logo__word{display:inline-flex;align-items:center;letter-spacing:.04em;line-height:1}
+.logo__gem{width:1em;height:1em;color:var(--citrine);margin:0 1px;flex:none}
+.logo__sub{display:block;font-family:var(--font-body);font-size:.52rem;font-weight:700;letter-spacing:.4em;color:#b3a9d6;margin-top:2px;text-transform:uppercase}
+.nav__links{display:flex;gap:18px}
+.nav__links a{color:#e7e1f5;text-decoration:none;font-weight:600;font-size:.92rem}
 .nav__links a:hover{color:var(--citrine)}
 .btn{display:inline-block;padding:11px 20px;border-radius:999px;font-family:var(--font-display);font-weight:700;text-decoration:none;cursor:pointer;border:none;font-size:1rem;white-space:nowrap}
 .btn--cta{background:var(--grad-cta);color:#fff;box-shadow:var(--shadow);transition:transform .15s ease}
