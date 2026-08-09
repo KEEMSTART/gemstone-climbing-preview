@@ -21,7 +21,7 @@
   <meta name="twitter:title" content="Birthday Parties at Gemstone Climbing">
   <meta name="twitter:description" content="Two hours, gear for every climber, a private party room and your own belayer. Parties from $100 — book at least 5 days ahead.">
   <meta name="twitter:image" content="assets/photos/og-cover.jpg">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -50,12 +50,12 @@
         <p class="eyebrow">Birthday parties &amp; group events</p>
         <h1 class="hero__title">Birthdays that rock. <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg></h1>
         <p class="hero__sub">You bring the cake — we bring the gear, the party room, and a private belayer. Parents relax, kids climb.</p>
-        <a class="btn btn--cta" href="#request">Request Your Party Date</a>
+        <a class="btn btn--cta" href="#packages">See Party Packages</a>
       </div>
     </section>
 
     <!-- ── Section 2: Package Cards ── -->
-    <section class="section">
+    <section class="section" id="packages">
       <div class="container">
         <h2>Party packages</h2>
         <p class="section__sub">Every party includes rental gear for all climbers, the private party room for 2 hours, a private belayer — and a free Gemstone t-shirt for the birthday kid.</p>
@@ -74,7 +74,7 @@
               <li>Free Gemstone tee for the birthday kid</li>
               <li>Extra climbers just $18 each</li>
             </ul>
-            <a class="btn btn--cta" href="#request">Request a Date</a>
+            <a class="btn btn--cta" href="https://app.rockgympro.com/b/?&bo=b6a54f2b3894438fa9c364e971099200" target="_blank" rel="noopener">Book a Sept&ndash;May Party</a>
           </div>
 
           <!-- Summer package -->
@@ -90,9 +90,21 @@
               <li>Free Gemstone tee for the birthday kid</li>
               <li>Extra kids $15 each — up to 10 total</li>
             </ul>
-            <a class="btn btn--cta" href="#request">Request a Date</a>
+            <a class="btn btn--cta" href="https://app.rockgympro.com/b/widget/?a=offering&amp;offering_guid=e28fd7f9db604c82b74915d0fe241a0a&amp;widget_guid=ecdc4bcc633c49f288ce681da1b95a86&amp;random=69ea560ee446d&amp;iframeid=&amp;mode=p&amp;course_guid=c4f1fbc56fb4bec9e6cb3a37bb050e20b5405edc" target="_blank" rel="noopener">Book a June&ndash;Aug Party</a>
           </div>
 
+        </div>
+
+        <!-- Contact, directly under the two package options -->
+        <div class="contact-card">
+          <div>
+            <h3>Questions before you book?</h3>
+            <p>Kim can help you pick the right package, sort out guest numbers, and find a date that works.</p>
+          </div>
+          <div class="contact-card__actions">
+            <a class="btn btn--cta" href="mailto:kim@gemstoneclimbing.rocks">Email Kim</a>
+            <a class="btn btn--dark" href="tel:+12083297257">(208) 329-7257</a>
+          </div>
         </div>
 
         <div class="facts">
@@ -112,18 +124,18 @@
         <div class="steps">
           <div class="step">
             <div class="step__num">1</div>
-            <h3>Pick a package</h3>
-            <p>Choose the size and length that fits your crew.</p>
+            <h3>Pick your season</h3>
+            <p>Sept–May or June–Aug — the packages differ slightly.</p>
           </div>
           <div class="step">
             <div class="step__num">2</div>
-            <h3>Request a date</h3>
-            <p>At least 5 days ahead — we'll check the calendar.</p>
+            <h3>Book it online</h3>
+            <p>Pick your date and pay right on our booking system, at least 5 days ahead.</p>
           </div>
           <div class="step">
             <div class="step__num">3</div>
-            <h3>$100 deposit locks it in</h3>
-            <p>Then send the waiver link to your guest list.</p>
+            <h3>Send the waiver link</h3>
+            <p>Pass it along with your invitations so every guest arrives ready to climb.</p>
           </div>
           <div class="step">
             <div class="step__num">4</div>
@@ -167,6 +179,9 @@
             <tfoot><tr><td colspan="2"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg> Book 10+ climbers in advance and we waive the gear rental fee.</td></tr></tfoot>
           </table>
         </div>
+        <p style="text-align:center;margin-top:22px">
+          <a class="btn btn--cta" href="https://app.rockgympro.com/b/?&bo=c05c769ec9e64f2591c1cbccc9f98d77" target="_blank" rel="noopener">Book a Group Online</a>
+        </p>
       </div>
     </section>
 
@@ -262,39 +277,21 @@
       </div>
     </section>
 
-    <!-- ── Section 5: Closing CTA + Request Form ── -->
-    <section class="cta-band" id="request">
+    <!-- Section 5: Closing CTA - book online -->
+    <section class="cta-band" id="book">
       <div class="container">
         <h2>Ready to book the best birthday ever?</h2>
-        <p class="cta-band__phone"><a href="tel:+12083297257"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (208) 329-7257</a></p>
-        <div class="request-form">
-          <form onsubmit="return false">
-            <label>
-              Parent name
-              <input type="text" placeholder="Jane Smith">
-            </label>
-            <label>
-              Email or phone
-              <input type="text" placeholder="jane@example.com or (208) 555-0100">
-            </label>
-            <label>
-              Preferred date
-              <input type="date">
-            </label>
-            <label>
-              Number of guests
-              <input type="number" min="1" placeholder="15">
-            </label>
-            <label>
-              Birthday child's age
-              <input type="number" min="1" placeholder="8">
-            </label>
-            <button type="button" class="btn btn--cta">Send Request</button>
-            <p class="note">This is a mockup — form isn't wired up yet.</p>
-          </form>
+        <p class="hero__sub">Pick your season and book online &mdash; it only takes a minute.</p>
+        <div class="hero__cta">
+          <a class="btn btn--cta" href="https://app.rockgympro.com/b/?&amp;bo=b6a54f2b3894438fa9c364e971099200" target="_blank" rel="noopener">Book Sept&ndash;May Party</a>
+          <a class="btn btn--cta" href="https://app.rockgympro.com/b/widget/?a=offering&amp;offering_guid=e28fd7f9db604c82b74915d0fe241a0a&amp;widget_guid=ecdc4bcc633c49f288ce681da1b95a86&amp;random=69ea560ee446d&amp;iframeid=&amp;mode=p&amp;course_guid=c4f1fbc56fb4bec9e6cb3a37bb050e20b5405edc" target="_blank" rel="noopener">Book June&ndash;Aug Party</a>
         </div>
-
-        <p style="margin-top:24px;opacity:.95">Party questions? Email <a href="mailto:kim@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">kim@</a> or <a href="mailto:patty@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">patty@gemstoneclimbing.rocks</a> · <a href="visit.html" style="color:#fff;font-weight:700">Hours &amp; directions →</a></p>
+        <p style="margin-top:26px;opacity:.95">Questions first? Email
+          <a href="mailto:kim@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">Kim</a> or
+          <a href="mailto:patty@gemstoneclimbing.rocks" style="color:#fff;font-weight:700">Patty</a>
+          &middot; <a href="tel:+12083297257" style="color:#fff;font-weight:700">(208) 329-7257</a>
+          &middot; <a href="visit.html" style="color:#fff;font-weight:700">Hours &amp; directions &rarr;</a>
+        </p>
       </div>
     </section>
 
