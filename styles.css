@@ -320,8 +320,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .hours-card__note{color:var(--muted);font-size:.85rem;margin-top:10px}
 
 /* ── Deals strip ── */
-.deals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
-@media (max-width:860px){.deals{grid-template-columns:1fr}}
+.deals{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1080px;margin:0 auto}
+@media (max-width:1000px){.deals{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.deals{grid-template-columns:1fr}}
 .deal{background:var(--rock-2);color:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .deal h3{color:var(--citrine);font-size:1.05rem;margin-bottom:6px}
 .deal p{font-size:.92rem;color:#d9d2ee}
+a.deal{display:block;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+a.deal:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(20,10,40,.3)}
+.deal__buy{display:inline-block;margin-top:10px;color:var(--citrine);font-weight:700;font-size:.9rem}
+
+/* ── Layout helpers: tighter pages, side-by-side tables, 3-step grid ── */
+.section--tight{padding:44px 0}
+.steps--3{grid-template-columns:repeat(3,1fr);max-width:860px;margin-inline:auto}
+@media (max-width:700px){.steps--3{grid-template-columns:1fr;max-width:380px}}
+.rate-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;max-width:1080px;margin:0 auto}
+@media (max-width:860px){.rate-cols{grid-template-columns:1fr;max-width:760px}}
+.rate-cols .table-wrap{max-width:none}

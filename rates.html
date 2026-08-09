@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <header class="nav">
@@ -38,21 +38,21 @@
     </section>
 
     <!-- ── First visit quick start ── -->
-    <section class="section" id="first-visit">
+    <section class="section section--tight" id="first-visit">
       <div class="container">
         <h2>First time here? It's easy.</h2>
         <p class="section__sub">Three steps and you're climbing.</p>
 
-        <div class="steps" style="max-width:900px;margin:0 auto 36px">
+        <div class="steps steps--3" style="margin-bottom:32px">
           <div class="step">
             <div class="step__num">1</div>
-            <h3>Sign the waiver</h3>
-            <p>Free, online, takes two minutes. Do it before you arrive.</p>
+            <h3>Waiver? Already done.</h3>
+            <p>Knock out the free online waiver at home and walk right in.</p>
           </div>
           <div class="step">
             <div class="step__num">2</div>
             <h3>Grab a day pass</h3>
-            <p>$16 adults · $14 youth — gear package just $7 more.</p>
+            <p>Purchase in-building when you arrive — see prices below.</p>
           </div>
           <div class="step">
             <div class="step__num">3</div>
@@ -63,66 +63,107 @@
 
         <div class="waiver-band">
           <div>
-            <h3>✍ Sign the waiver before you arrive</h3>
-            <p>Every guest entering the climbing areas needs one — it's free, online, and protects everyone. Kids need a parent or guardian to sign.</p>
+            <h3>✍ Save time — do the waiver at home</h3>
+            <p>It's free, online, and takes about two minutes. Every climber needs one, and kids need a parent or guardian to sign.</p>
           </div>
-          <a class="btn btn--dark" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">Sign the Waiver Now</a>
+          <a class="btn btn--dark" href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener">Complete the Waiver</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Day passes & gear ── -->
-    <section class="section reveal" style="padding-top:0">
-      <div class="container rate-stack">
-
-        <div class="table-wrap">
-          <table class="rate-table">
-            <caption>Day passes</caption>
-            <thead><tr><th>Pass</th><th>Price</th></tr></thead>
-            <tbody>
-              <tr><td>Adult</td><td class="price">$16</td></tr>
-              <tr><td>Youth (4–17) · Military · Senior · First Responders</td><td class="price">$14</td></tr>
-              <tr><td>Child 3 &amp; under (with paid adult, 1:1)</td><td class="price">Free</td></tr>
-            </tbody>
-            <tfoot><tr><td colspan="2">A day pass covers all climbing areas, all day — leave and come back.</td></tr></tfoot>
-          </table>
+    <!-- ── Deals & specials (clickable → RGP purchase) ── -->
+    <section class="section section--tight reveal" id="specials">
+      <div class="container">
+        <h2>Deals &amp; specials</h2>
+        <p class="section__sub">Tap a deal to purchase online through our booking system.</p>
+        <div class="deals">
+          <a class="deal" href="https://app.rockgympro.com/b/?&bo=5d6b82f4620b4a5884ccf65056309714" target="_blank" rel="noopener">
+            <h3>🎉 Friday Night Teen Pass</h3>
+            <p>Drop the teens off any Friday between 4pm and 9pm for wholesome fun and exercise.</p>
+            <span class="deal__buy">Purchase online →</span>
+          </a>
+          <a class="deal" href="https://app.rockgympro.com/b/?&bo=aaace27e598f47829d0b3e59622bac7f" target="_blank" rel="noopener">
+            <h3>🎓 CSI Student Deal</h3>
+            <p>Special College of Southern Idaho student pricing — good any time.</p>
+            <span class="deal__buy">Purchase online →</span>
+          </a>
+          <div class="deal">
+            <h3>🌞 Summer Youth Happy Hour</h3>
+            <p>$10 for all youth 17 &amp; under, gear included. Mon–Fri 10am–4pm, Memorial Day–August.</p>
+          </div>
+          <a class="deal" href="https://app.rockgympro.com/b/?&bo=giftcard-e1d3fec8b7034754965eb4cd74bb321d" target="_blank" rel="noopener">
+            <h3>🎁 Gift Cards</h3>
+            <p>The easiest gift for the climber (or future climber) in your life.</p>
+            <span class="deal__buy">Buy a gift card →</span>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <div class="table-wrap">
-          <table class="rate-table">
-            <caption>Gear rental</caption>
-            <thead><tr><th>Rental</th><th>Price</th></tr></thead>
-            <tbody>
-              <tr><td>Full package — shoes, harness &amp; chalk bag</td><td class="price">$7</td></tr>
-              <tr><td>Shoes only</td><td class="price">$6</td></tr>
-              <tr><td>Harness only</td><td class="price">$5</td></tr>
-              <tr><td>Chalk bag only</td><td class="price">$2</td></tr>
-              <tr><td>Monthly gear rental</td><td class="price">$35 · $20*</td></tr>
-              <tr><td>Annual gear — individual / couple / family</td><td class="price">$100 / $150 / $200</td></tr>
-            </tbody>
-            <tfoot><tr><td colspan="2">*Discount rate: youth, students, military, seniors, first responders &amp; front-line workers.</td></tr></tfoot>
-          </table>
+    <!-- ── Day passes, gear & punch cards ── -->
+    <section class="section section--tight reveal">
+      <div class="container">
+        <h2>Day rates</h2>
+        <p class="section__sub">Walk-ins always welcome.</p>
+        <div class="rate-cols">
+
+          <div class="table-wrap">
+            <table class="rate-table">
+              <caption>Day passes</caption>
+              <thead><tr><th>Pass</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Adult</td><td class="price">$16</td></tr>
+                <tr><td>Youth (4–17) &amp; discount rate*</td><td class="price">$14</td></tr>
+                <tr><td>Child 3 &amp; under (with paid adult, 1:1)</td><td class="price">Free</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Covers all climbing areas, all day — leave and come back.</td></tr></tfoot>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table class="rate-table">
+              <caption>Gear rental</caption>
+              <thead><tr><th>Rental</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Full package — shoes, harness &amp; chalk</td><td class="price">$7</td></tr>
+                <tr><td>Shoes · harness · chalk bag</td><td class="price">$6 · $5 · $2</td></tr>
+                <tr><td>Monthly gear rental</td><td class="price">$35 · $20*</td></tr>
+                <tr><td>Annual — individual / couple / family</td><td class="price">$100 / $150 / $200</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table class="rate-table">
+              <caption>Punch cards — 10 visits, shareable</caption>
+              <thead><tr><th>Card</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Adult</td><td class="price">$140</td></tr>
+                <tr><td>Adult, gear included</td><td class="price">$175</td></tr>
+                <tr><td>Youth &amp; student*</td><td class="price">$110</td></tr>
+                <tr><td>Youth &amp; student*, gear included</td><td class="price">$130</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table class="rate-table">
+              <caption>Good to know</caption>
+              <tbody>
+                <tr><td>✍ Waiver required for every climber — <a href="https://waiver.smartwaiver.com/w/5cfe9b97b33d8/web/" target="_blank" rel="noopener" style="color:var(--amethyst)">sign online</a></td><td></td></tr>
+                <tr><td>👟 Wear socks for rental shoes</td><td></td></tr>
+                <tr><td>🧗 Free belay classes — just ask the desk</td><td></td></tr>
+                <tr><td>*Discount rate: youth, students, military, seniors, first responders &amp; front-line workers</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
-
-        <div class="table-wrap">
-          <table class="rate-table">
-            <caption>Punch cards — 10 visits, share with friends</caption>
-            <thead><tr><th>Card</th><th>Price</th></tr></thead>
-            <tbody>
-              <tr><td>Adult</td><td class="price">$140</td></tr>
-              <tr><td>Adult, gear included</td><td class="price">$175</td></tr>
-              <tr><td>Discount rate*</td><td class="price">$110</td></tr>
-              <tr><td>Discount rate*, gear included</td><td class="price">$130</td></tr>
-            </tbody>
-            <tfoot><tr><td colspan="2">*Youth, students, military, seniors, first responders &amp; front-line workers.</td></tr></tfoot>
-          </table>
-        </div>
-
       </div>
     </section>
 
     <!-- ── Memberships ── -->
-    <section class="section reveal" style="padding-top:0" id="memberships">
+    <section class="section section--tight reveal" id="memberships">
       <div class="container">
         <h2>Memberships</h2>
         <p class="section__sub">Members climb free every day, get free yoga &amp; fitness classes, and get extra member-only morning hours.</p>
@@ -170,28 +211,6 @@
           </div>
         </div>
         <p class="note">*Discount rate: youth, students, military, seniors, first responders &amp; front-line workers. Yoga-only pass? See <a href="yoga-fitness.html" style="color:var(--amethyst)">Yoga &amp; Fitness</a>.</p>
-      </div>
-    </section>
-
-    <!-- ── Deals & specials ── -->
-    <section class="section reveal" style="padding-top:0">
-      <div class="container">
-        <h2>Deals &amp; specials</h2>
-        <p class="section__sub">Real ways to climb for less.</p>
-        <div class="deals">
-          <div class="deal">
-            <h3>🌞 Summer Youth Happy Hour</h3>
-            <p>$10 for all youth 17 &amp; under — gear included. Mon–Fri, 10am–4pm, Memorial Day through August.</p>
-          </div>
-          <div class="deal">
-            <h3>🎉 Friday Night Teen Pass</h3>
-            <p>Drop the teens off any time between 4pm and 9pm on Fridays for wholesome fun and exercise.</p>
-          </div>
-          <div class="deal">
-            <h3>🎓 CSI Student Deal</h3>
-            <p>Special College of Southern Idaho student pricing, good any time. Bring your student ID.</p>
-          </div>
-        </div>
       </div>
     </section>
 
