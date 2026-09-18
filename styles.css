@@ -68,6 +68,11 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
   .nav__links{gap:8px 20px}
   .nav__links a{font-size:.88rem;letter-spacing:.01em}
 }
+@media (max-width:1000px) and (min-width:761px){
+  .nav__bar{padding:16px 16px 36px}
+  .nav__links{gap:6px 18px;max-width:720px}
+  .nav__links a{font-size:.82rem;letter-spacing:.01em}
+}
 
 /* Mobile: menu button + drop-down panel (links wrap below the bar with JS off) */
 .nav__burger{display:none;background:none;border:0;color:#fff;cursor:pointer;border-radius:12px;
@@ -77,7 +82,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .nav__burger .ico--close{display:none}
 .nav.is-open .nav__burger .ico--open{display:none}
 .nav.is-open .nav__burger .ico--close{display:inline-block}
-@media (max-width:1000px){
+@media (max-width:760px){
   .nav__bar{padding:10px 16px 34px;justify-content:flex-end;min-height:60px}
   .nav__burger{display:inline-flex}
   .js .nav__links{position:absolute;top:100%;left:0;right:0;z-index:60;background:rgba(0,0,0,.97);
@@ -533,7 +538,7 @@ a.card--link h3{color:var(--ink)}
 /* ── Hero clearance for the hanging logo (must come after the hero rules) ── */
 .hero{padding-top:128px}
 .hero--page{padding-top:96px}
-@media (max-width:1000px){.hero{padding-top:96px}.hero--page{padding-top:84px}}
+@media (max-width:760px){.hero{padding-top:96px}.hero--page{padding-top:84px}}
 
 /* Rates hero: the one-liner IS the title now */
 .hero--page .hero__title--lead{font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.25;max-width:760px;margin:6px auto 0;font-weight:700}
