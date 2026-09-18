@@ -60,8 +60,8 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 
 /* Logo badge: centered, half over the bar, half over the hero */
 .nav__logo{position:absolute;left:50%;top:100%;transform:translate(-50%,-50%);z-index:55;
-  background:#fff;border-radius:14px;padding:9px 16px;box-shadow:0 10px 30px rgba(0,0,0,.35);line-height:0}
-.nav__logo img{width:170px;height:auto;display:block}
+  background:#fff;border-radius:12px;padding:7px 13px;box-shadow:0 10px 30px rgba(0,0,0,.35);line-height:0}
+.nav__logo img{width:130px;height:auto;display:block}
 
 /* Mobile: menu button + drop-down panel (links wrap below the bar with JS off) */
 .nav__burger{display:none;background:none;border:0;color:#fff;cursor:pointer;border-radius:12px;
@@ -82,7 +82,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
   .js .nav__links a:last-child{border-bottom:0}
   .no-js .nav__links{gap:8px 18px;padding-bottom:10px;justify-content:center}
   .nav__logo{padding:8px 14px;border-radius:12px}
-  .nav__logo img{width:130px}
+  .nav__logo img{width:104px}
 }
 
 /* ── Focus visibility (keyboard a11y) ── */
@@ -531,3 +531,9 @@ a.card--link h3{color:var(--ink)}
   .hero{padding-top:104px}
   .hero--page{padding-top:90px}
 }
+.hero{padding-top:128px}
+.hero--page{padding-top:96px}
+@media (max-width:900px){.hero{padding-top:96px}.hero--page{padding-top:84px}}
+
+/* Rates hero: the one-liner IS the title now */
+.hero--page .hero__title--lead{font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.25;max-width:760px;margin:6px auto 0;font-weight:700}
