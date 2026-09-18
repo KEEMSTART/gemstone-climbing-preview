@@ -68,7 +68,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .nav.is-open .nav__burger .ico--open{display:none}
 .nav.is-open .nav__burger .ico--close{display:inline-block}
 
-@media (max-width:860px){
+@media (max-width:1199px){
   .nav__burger{display:inline-flex}
   .nav__inner{gap:12px}
   /* With JS the links become a drop-down panel; without JS they simply wrap
@@ -507,3 +507,54 @@ a.card--link h3{color:var(--ink)}
   a.card--link:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(20,10,40,.18)}
   a.card--link:hover .card__go{transform:translateX(4px)}
 }
+
+/* ── Nav sizing for the 8-item bar ── */
+.nav .container{max-width:1300px}
+.nav__links{gap:13px}
+.nav__links a{font-size:.86rem;white-space:nowrap}
+
+/* ── "More" dropdown (desktop) ── */
+.nav__more{position:relative}
+.nav__more-btn{background:none;border:0;color:#e7e1f5;font:inherit;font-weight:600;font-size:.86rem;
+  cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
+.nav__more-btn:hover,.nav__more.is-current .nav__more-btn{color:var(--citrine)}
+.nav__more-btn .ico--chev{width:14px;height:14px;transition:transform .2s ease}
+.nav__more.is-open .nav__more-btn .ico--chev{transform:rotate(180deg)}
+@media (min-width:1200px){
+  .nav__more::after{content:'';position:absolute;left:-10px;right:-10px;top:100%;height:16px}
+  .nav__menu{position:absolute;top:calc(100% + 12px);right:0;min-width:220px;
+    background:rgba(14,11,26,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:8px;display:none;flex-direction:column;
+    box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:60}
+  .nav__menu a{padding:10px 12px;border-radius:9px;display:block}
+  .nav__menu a:hover{background:rgba(255,255,255,.08)}
+  .nav__more:hover .nav__menu,.nav__more:focus-within .nav__menu,.nav__more.is-open .nav__menu{display:flex}
+}
+/* In the mobile panel (and with JS off) the More group is just more links */
+@media (max-width:1199px){
+  .nav__more-btn{display:none}
+  .nav__menu{display:contents}
+}
+.no-js .nav__more-btn{display:none}
+.no-js .nav__menu{display:contents}
+
+/* ── Waiver band living inside the homepage hero ── */
+.hero .waiver-band{margin:34px auto 0;text-align:left;position:relative;z-index:3;
+  box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.hero .waiver-band h3{color:#0e0b1a}
+
+/* ── New page heroes (reuse existing photography with fresh tints) ── */
+.hero--calendar{--hero-img:url('assets/photos/hero-rates.jpg');--hero-pos:center 40%;
+  --hero-tint:linear-gradient(120deg, rgba(37,99,235,.84), rgba(123,47,247,.76))}
+.hero--gift{--hero-img:url('assets/photos/party-hero.jpg');--hero-pos:center 55%;
+  --hero-tint:linear-gradient(120deg, rgba(255,45,155,.78), rgba(123,47,247,.8))}
+.hero--community{--hero-img:url('assets/photos/hero-visit.jpg');--hero-pos:center 45%;
+  --hero-tint:linear-gradient(120deg, rgba(16,185,129,.8), rgba(37,99,235,.78))}
+.hero--donation{--hero-img:url('assets/photos/hero-adaptive.jpg');--hero-pos:center 48%;
+  --hero-tint:linear-gradient(120deg, rgba(123,47,247,.84), rgba(255,45,155,.72))}
+.hero--employment{--hero-img:url('assets/photos/hero-classes.jpg');--hero-pos:center 72%;
+  --hero-tint:linear-gradient(120deg, rgba(26,20,48,.86), rgba(37,99,235,.76))}
+
+/* Two-up deals (community events) */
+.deals--2{grid-template-columns:repeat(2,1fr);max-width:900px}
+@media (max-width:760px){.deals--2{grid-template-columns:1fr}}

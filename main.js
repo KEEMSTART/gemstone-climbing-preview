@@ -28,6 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── "More" dropdown in the desktop nav ──────────────────────────────────
+  // Hover/focus-within opens it via CSS; this adds tap + Escape + outside-click.
+  const more = document.querySelector('.nav__more');
+  const moreBtn = more && more.querySelector('.nav__more-btn');
+  if (moreBtn) {
+    const setMore = (open) => {
+      more.classList.toggle('is-open', open);
+      moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    moreBtn.addEventListener('click', (e) => { e.stopPropagation(); setMore(!more.classList.contains('is-open')); });
+    document.addEventListener('click', (e) => { if (!more.contains(e.target)) setMore(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMore(false); });
+  }
+
   // ── 2. Scroll-reveal ─────────────────────────────────────────────────────
   const reveals = document.querySelectorAll('.reveal');
   if (reduce || !('IntersectionObserver' in window)) {
