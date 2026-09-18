@@ -44,51 +44,49 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
   .js .reveal { opacity:1; transform:none; }
 }
 
-/* ── Nav ── */
-.nav{position:sticky;top:0;z-index:50;background:rgba(14,11,26,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
-.nav__logo{color:#fff;font-family:var(--font-display);font-weight:800;font-size:1.3rem;text-decoration:none;white-space:nowrap}
-/* Brand wordmark: GEMST♦NE / CLIMBING CENTER (recreates the real logo) */
-.logo__word{display:inline-flex;align-items:center;letter-spacing:.04em;line-height:1}
-.logo__gem{width:1em;height:1em;color:var(--citrine);margin:0 1px;flex:none}
-.logo__sub{display:block;font-family:var(--font-body);font-size:.52rem;font-weight:700;letter-spacing:.4em;color:#b3a9d6;margin-top:2px;text-transform:uppercase}
-.nav__links{display:flex;gap:18px}
-.nav__links a{color:#e7e1f5;text-decoration:none;font-weight:600;font-size:.92rem}
-.nav__links a:hover{color:var(--citrine)}
+
+/* ── Buttons ── */
 .btn{display:inline-block;padding:11px 20px;border-radius:999px;font-family:var(--font-display);font-weight:700;text-decoration:none;cursor:pointer;border:none;font-size:1rem;white-space:nowrap}
 .btn--cta{background:var(--grad-cta);color:#fff;box-shadow:var(--shadow);transition:transform .15s ease}
 .btn--cta:hover{transform:scale(1.04)}
-/* ── Mobile navigation ── */
-.nav__burger{display:none;background:none;border:0;color:#fff;cursor:pointer;
-  border-radius:12px;align-items:center;justify-content:center;
-  min-width:44px;min-height:44px;transition:background .2s ease}
+
+/* ── Header: two-row tab bar + centered straddling logo (Kim's layout) ── */
+.nav{position:relative;background:#000;z-index:50}
+.nav__bar{max-width:1400px;margin:0 auto;padding:22px 20px 42px;display:flex;justify-content:center;align-items:center}
+.nav__links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 44px;max-width:1180px}
+.nav__links a{color:#fff;text-decoration:none;font-family:var(--font-body);font-weight:700;font-size:1.05rem;
+  text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;padding:4px 2px;transition:color .2s ease}
+.nav__links a:hover,.nav__links a[aria-current="page"]{color:var(--citrine)}
+
+/* Logo badge: centered, half over the bar, half over the hero */
+.nav__logo{position:absolute;left:50%;top:100%;transform:translate(-50%,-50%);z-index:55;
+  background:#fff;border-radius:16px;padding:10px 18px;box-shadow:0 10px 30px rgba(0,0,0,.35);line-height:0}
+.nav__logo img{width:220px;height:auto;display:block}
+.hero{padding-top:150px}
+.hero--page{padding-top:112px}
+
+/* Mobile: menu button + drop-down panel (links wrap below the bar with JS off) */
+.nav__burger{display:none;background:none;border:0;color:#fff;cursor:pointer;border-radius:12px;
+  align-items:center;justify-content:center;min-width:44px;min-height:44px;transition:background .2s ease}
 .nav__burger:hover{background:rgba(255,255,255,.12)}
 .nav__burger .ico{width:26px;height:26px}
 .nav__burger .ico--close{display:none}
 .nav.is-open .nav__burger .ico--open{display:none}
 .nav.is-open .nav__burger .ico--close{display:inline-block}
-
-@media (max-width:1199px){
+@media (max-width:900px){
+  .nav__bar{padding:10px 16px 34px;justify-content:flex-end;min-height:60px}
   .nav__burger{display:inline-flex}
-  .nav__inner{gap:12px}
-  /* With JS the links become a drop-down panel; without JS they simply wrap
-     below the bar so every page stays reachable. */
-  .js .nav__links{
-    position:absolute;top:100%;left:0;right:0;
-    background:rgba(14,11,26,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-    border-top:1px solid rgba(255,255,255,.08);
-    flex-direction:column;gap:0;padding:6px 20px 14px;display:none;
-    box-shadow:0 18px 40px rgba(0,0,0,.35)
-  }
+  .js .nav__links{position:absolute;top:100%;left:0;right:0;z-index:60;background:rgba(0,0,0,.97);
+    flex-direction:column;gap:0;padding:6px 20px 14px;display:none;max-width:none;
+    border-top:1px solid rgba(255,255,255,.1);box-shadow:0 18px 40px rgba(0,0,0,.45)}
   .js .nav.is-open .nav__links{display:flex}
-  .js .nav__links a{padding:14px 4px;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
+  .js .nav__links a{padding:14px 4px;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.08)}
   .js .nav__links a:last-child{border-bottom:0}
-  .no-js .nav__links{flex-wrap:wrap;gap:14px;width:100%;order:3;padding-bottom:12px}
-}
-@media (max-width:420px){
-  .nav__logo{font-size:1.1rem}
-  .nav__book{padding:9px 15px;font-size:.85rem}
-  .logo__sub{letter-spacing:.28em;font-size:.48rem}
+  .no-js .nav__links{gap:8px 18px;padding-bottom:10px;justify-content:center}
+  .nav__logo{padding:8px 14px;border-radius:12px}
+  .nav__logo img{width:160px}
+  .hero{padding-top:110px}
+  .hero--page{padding-top:96px}
 }
 
 /* ── Focus visibility (keyboard a11y) ── */
@@ -508,35 +506,6 @@ a.card--link h3{color:var(--ink)}
   a.card--link:hover .card__go{transform:translateX(4px)}
 }
 
-/* ── Nav sizing for the 8-item bar ── */
-.nav .container{max-width:1300px}
-.nav__links{gap:13px}
-.nav__links a{font-size:.86rem;white-space:nowrap}
-
-/* ── "More" dropdown (desktop) ── */
-.nav__more{position:relative}
-.nav__more-btn{background:none;border:0;color:#e7e1f5;font:inherit;font-weight:600;font-size:.86rem;
-  cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
-.nav__more-btn:hover,.nav__more.is-current .nav__more-btn{color:var(--citrine)}
-.nav__more-btn .ico--chev{width:14px;height:14px;transition:transform .2s ease}
-.nav__more.is-open .nav__more-btn .ico--chev{transform:rotate(180deg)}
-@media (min-width:1200px){
-  .nav__more::after{content:'';position:absolute;left:-10px;right:-10px;top:100%;height:16px}
-  .nav__menu{position:absolute;top:calc(100% + 12px);right:0;min-width:220px;
-    background:rgba(14,11,26,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:8px;display:none;flex-direction:column;
-    box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:60}
-  .nav__menu a{padding:10px 12px;border-radius:9px;display:block}
-  .nav__menu a:hover{background:rgba(255,255,255,.08)}
-  .nav__more:hover .nav__menu,.nav__more:focus-within .nav__menu,.nav__more.is-open .nav__menu{display:flex}
-}
-/* In the mobile panel (and with JS off) the More group is just more links */
-@media (max-width:1199px){
-  .nav__more-btn{display:none}
-  .nav__menu{display:contents}
-}
-.no-js .nav__more-btn{display:none}
-.no-js .nav__menu{display:contents}
 
 /* ── Waiver band living inside the homepage hero ── */
 .hero .waiver-band{margin:34px auto 0;text-align:left;position:relative;z-index:3;
