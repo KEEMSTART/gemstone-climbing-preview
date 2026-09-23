@@ -52,26 +52,27 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 
 /* ── Header: two-row tab bar + centered straddling logo (Kim's layout) ── */
 .nav{position:relative;background:#000;z-index:50}
-.nav__bar{max-width:1400px;margin:0 auto;padding:22px 20px 42px;display:flex;justify-content:center;align-items:center}
-.nav__links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;max-width:1260px}
+.nav__bar{max-width:1400px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:28px}
+.nav__links{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 26px;margin-left:auto}
 .nav__links a{color:#fff;text-decoration:none;font-family:var(--font-body);font-weight:700;font-size:1rem;
   text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;padding:4px 2px;transition:color .2s ease}
 .nav__links a:hover,.nav__links a[aria-current="page"]{color:var(--citrine)}
 
-/* Logo badge: centered, half over the bar, half over the hero */
-.nav__logo{position:absolute;left:50%;top:100%;transform:translate(-50%,-50%);z-index:55;
-  background:#fff;border-radius:12px;padding:7px 13px;box-shadow:0 10px 30px rgba(0,0,0,.35);line-height:0}
-.nav__logo img{width:130px;height:auto;display:block}
+/* Logo, top-left inside the bar */
+.nav__logo{flex:none;line-height:0;display:block}
+.nav__logo img{width:150px;height:auto;display:block}
 
-/* Small laptops / tablets: tighten so 11 tabs still make two rows */
-@media (max-width:1199px) and (min-width:1001px){
-  .nav__links{gap:8px 20px}
-  .nav__links a{font-size:.88rem;letter-spacing:.01em}
+/* Mid widths: tighten so the tabs keep to two rows beside the logo */
+@media (max-width:1320px) and (min-width:1061px){
+  .nav__bar{gap:20px}
+  .nav__links{gap:8px 18px}
+  .nav__links a{font-size:.85rem;letter-spacing:0}
 }
-@media (max-width:1000px) and (min-width:761px){
-  .nav__bar{padding:16px 16px 36px}
-  .nav__links{gap:6px 18px;max-width:720px}
-  .nav__links a{font-size:.82rem;letter-spacing:.01em}
+@media (max-width:1060px) and (min-width:761px){
+  .nav__bar{gap:14px;padding:12px 16px}
+  .nav__logo img{width:116px}
+  .nav__links{gap:6px 13px}
+  .nav__links a{font-size:.75rem;letter-spacing:0}
 }
 
 /* Mobile: menu button + drop-down panel (links wrap below the bar with JS off) */
@@ -83,7 +84,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .nav.is-open .nav__burger .ico--open{display:none}
 .nav.is-open .nav__burger .ico--close{display:inline-block}
 @media (max-width:760px){
-  .nav__bar{padding:10px 16px 34px;justify-content:flex-end;min-height:60px}
+  .nav__bar{padding:10px 16px;gap:12px;min-height:60px}
   .nav__burger{display:inline-flex}
   .js .nav__links{position:absolute;top:100%;left:0;right:0;z-index:60;background:rgba(0,0,0,.97);
     flex-direction:column;gap:0;padding:6px 20px 14px;display:none;max-width:none;
@@ -92,8 +93,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
   .js .nav__links a{padding:14px 4px;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.08)}
   .js .nav__links a:last-child{border-bottom:0}
   .no-js .nav__links{gap:8px 18px;padding-bottom:10px;justify-content:center}
-  .nav__logo{padding:8px 14px;border-radius:12px}
-  .nav__logo img{width:104px}
+  .nav__logo img{width:116px}
 }
 
 /* ── Focus visibility (keyboard a11y) ── */
@@ -536,9 +536,6 @@ a.card--link h3{color:var(--ink)}
 @media (max-width:760px){.deals--2{grid-template-columns:1fr}}
 
 /* ── Hero clearance for the hanging logo (must come after the hero rules) ── */
-.hero{padding-top:128px}
-.hero--page{padding-top:96px}
-@media (max-width:760px){.hero{padding-top:96px}.hero--page{padding-top:84px}}
 
 /* Rates hero: the one-liner IS the title now */
 .hero--page .hero__title--lead{font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.25;max-width:760px;margin:6px auto 0;font-weight:700}
