@@ -52,7 +52,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 
 /* ── Header: two-row tab bar + centered straddling logo (Kim's layout) ── */
 .nav{position:relative;background:#000;z-index:50}
-.nav__bar{max-width:1400px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px}
+.nav__bar{max-width:1600px;margin:0 auto;padding:14px 20px 14px 8px;display:flex;align-items:center;gap:18px}
 /* Mirrors the logo width so the tab block centres on the page, not on the leftover space */
 .nav__bar::after{content:"";flex:none;width:150px}
 .nav__links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 26px;flex:1}
@@ -71,7 +71,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
   .nav__links a{font-size:.85rem;letter-spacing:0}
 }
 @media (max-width:1060px) and (min-width:841px){
-  .nav__bar{gap:12px;padding:12px 14px}
+  .nav__bar{gap:12px;padding:12px 14px 12px 6px}
   .nav__bar::after{width:60px}
   .nav__logo img{width:104px}
   .nav__links{gap:5px 11px}
@@ -87,7 +87,7 @@ h1,h2,h3,h4{font-family:var(--font-display); line-height:1.1;}
 .nav.is-open .nav__burger .ico--open{display:none}
 .nav.is-open .nav__burger .ico--close{display:inline-block}
 @media (max-width:840px){
-  .nav__bar{padding:10px 16px;gap:12px;min-height:60px}
+  .nav__bar{padding:10px 16px 10px 8px;gap:12px;min-height:60px}
   .nav__bar::after{display:none}
   .nav__burger{display:inline-flex}
   .js .nav__links{position:absolute;top:100%;left:0;right:0;z-index:60;background:rgba(0,0,0,.97);
